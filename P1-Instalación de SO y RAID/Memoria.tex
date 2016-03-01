@@ -89,6 +89,79 @@
 
 \newpage
 
+
+\begin{enumerate}
+	\section{Introducción}
+	\subsection{Concepto de Máquina Virtual y virtualización}
+		\item ¿Qué modos y/o tipos de $"$Virtualización Hardware$"$ existen?(No más de 3 párrafos)
+		
+		\item Muestre los precios y características de varios proveedores de VPS(Virtual Private
+		Server) y compare con el precio de servidores dedicados(administrados y no administrados)
+		de características similares. Comente diferencias.
+		
+		\item ¿Qué otros software de virtualización existen además de VMWare y Virtual Box?
+		
+	\section{Instalación de Sistemas Operativos virtualizados}
+		\item Enumere algunas de las innovaciones en Windows 2012 R2 respecto a 2008R2.
+		
+		\item ¿Qué empresa hay detrás de Ubuntu?¿Qué otros productos/servicios ofrece?
+		
+		\item ¿Qué relación tiene CentOS con RedHat y con el proyecto Fedora?
+		
+		\item Indique qué otros SO se utilizan en servidores y el porcentaje de uso(no olvide poner
+		la fuente de donde saca la información y preste atención a la fecha de esta).
+		
+	\subsection{Linux: Particionamiento del Disco Duro virtual y creación de RAID1}
+		\item ¿Qué diferencia hay entre RAID mediante SW y mediante HW?\\
+		
+		\item \begin{enumerate}
+			\item ¿Qué es LVM?
+			
+			\item ¿Qué ventaja tiene para un servidor de gama baja?
+			
+			\item Si va a tener un servidor web, ¿le daría un tamaño grande o pequeño a /var?\\
+			(\href{http://www.tldp.org/HOWTO/LVM-HOWTO/benefitsoflvmsmall.html}
+			{http://www.tldp.org/HOWTO/LVM-HOWTO/benefitsoflvmsmall.html})
+			(\href{https://wiki.archlinux.org/index.php/LVM#Introduction}
+			{https://wiki.archlinux.org/index.php/LVM$\#$Introduction})\\
+		\end{enumerate}
+		
+		\item ¿Debemos cifrar también el volumen que contiene el espacio para swap? ¿y el volumen
+		en el que montaremos /boot?
+		
+		\item ¿Qué otro tipo de usos de una partición le permite configurar el asistente de instalación?
+		¿Cuál es la principal diferencia entre ext4 y ext2?
+		
+		\item Muestre cómo ha quedado el disco particionado una vez el sistema está instalado(lsblk).
+		
+		\item \begin{enumerate}
+			\item ¿Cómo ha hecho el disco 2 $"$arrancable$"$?
+			
+			\item ¿Qué hace el comando grub-install?
+			
+			\item ¿Qué hace el comando dd?
+		\end{enumerate}
+		
+		\item \textbf{Opcional:} Muestre(con capturas de pantalla) cómo ha comprobado que el RAID1
+		funciona.
+		
+	\subsection{Windows Server}
+		\item ¿Qué diferencia hay entre Standard y Datacenter?
+		
+		\item Continúe usted con el proceso de definición de RAID1 para los 2 discos de 50MiB que
+		ha creado. Muestre el proceso con capturas de pantalla.
+		
+	\subsection{Ajuste de parámetros de la Máquina Virtual}
+		\item Explique brevemente qué diferencias hay entre los 3 tipos de conexión que permite el
+		VMSW para las Mvs: NAT, Host-only y Bridge.
+		
+	\section{Editores de texto}
+		\item \textbf{Opcional:} ¿Qué relación hay entre los atajos de teclado de emacs y los de
+		la consola de bash?¿y entre los de vi y las páginas del manual?
+		
+\end{enumerate}
+
+
 \newpage
 \section{Referencias}
 \begin{thebibliography}{10}
