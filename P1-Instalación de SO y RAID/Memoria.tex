@@ -94,6 +94,21 @@
 	\section{Introducción}
 	\subsection{Concepto de Máquina Virtual y virtualización}
 		\item ¿Qué modos y/o tipos de $"$Virtualización Hardware$"$ existen?(No más de 3 párrafos)
+		La virtualización hardware enmascara las características físicas del
+		ordenador y las simula de una forma más abstracta. Se pueden dividir en:
+		
+		\begin{itemize}
+			\item \textbf{Virtualización completa}\cite{Full_Virt}\cite{HW_Virt}: en la cuál,
+			se muestran suficientes características hardware como para simular la ejecución
+			de un sistema operativo de forma que parezca que $"$se está ejecutando en una máquina
+			aislada$"$\cite{Intel_Virt}, es decir, como si se ejecutara en un ordenador
+			independiente con las características que está proporcionando la VMSW.
+			
+			\item \textbf{Virtualización parcial}\cite{HW_Virt}: en la cuál, se muestran
+			suficientes características como para ejecutar una serie de aplicaciones pero no
+			como para ejecutar un sistema operativo.
+		\end{itemize}
+		
 		
 		\item Muestre los precios y características de varios proveedores de VPS(Virtual Private
 		Server) y compare con el precio de servidores dedicados(administrados y no administrados)
@@ -180,6 +195,18 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Intel_Virt}
+Uhlig, R. et al.(May 2005);
+  Intel virtualization technology,
+  Computer , vol.38, no.5, pp. 48-56,
+
+\bibitem{HW_Virt}
+Hardware Virtualization. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Hardware_virtualization}
+\bibitem{Full_Virt}
+Full Virtualization. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Full_virtualization}
 
 \bibitem{Ubuntu}
 Ubuntu. Wikipedia, the free encyclopedia.\\
