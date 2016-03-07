@@ -168,6 +168,14 @@
 		
 	\subsection{Linux: Particionamiento del Disco Duro virtual y creación de RAID1}
 		\item ¿Qué diferencia hay entre RAID mediante SW y mediante HW?\\
+		Un RAID mediante hardware es un controlador(normalmente, en forma de tarjeta) que permite gestionar
+		el sistema de forma independiente y dando la sensación a la máquina de que hay un único disco mientras
+		que en el RAID por software es el propio software el encargado de tratar los discos como un RAID.
+		
+		Mientras que el RAID por software es más barato(ya que es parte del sistema operativo) y es mejor
+		para RAID 0 ó RAID 1, el RAID por hardware es más simple y permite \textit{$"$hot swap$"$}.
+		\cite{HWvsSW}\cite{RAID_RedHat}
+		
 		
 		\item \begin{enumerate}
 			\item ¿Qué es LVM?
@@ -285,6 +293,14 @@ Red Hat Enterprise Linux. Wikipedia, the free encyclopedia.\\
 Max Spevack, diciembre, 2006.\\
   Fedora Project Leader Max Spevack Responds
 
+\bibitem{HWvsSW}
+Hardware RAID vs. Software RAID: Which Implementation is Best for my Application?\\
+  \url{http://www.adaptec.com/nr/rdonlyres/14b2fd84-f7a0-4ac5-a07a-214123ea3dd6/0/4423_sw_hwraid_10.pdf}
+
+\bibitem{RAID_RedHat}
+Red Hat Enterprise Linux 3: Manual de administración del sistema.\\
+  Capítulo 3. 3.3. Hardware y Software RAID.\\
+  \url{http://web.mit.edu/rhel-doc/3/rhel-sag-es-3/s1-raid-approaches.html}
 
 \end{thebibliography}
 
