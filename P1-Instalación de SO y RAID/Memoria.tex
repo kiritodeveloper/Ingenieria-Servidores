@@ -192,6 +192,13 @@
 		\item ¿Debemos cifrar también el volumen que contiene el espacio para swap? ¿y el volumen
 		en el que montaremos /boot?
 		
+		Dado que el espacio para swap puede llegar a contener información crítica, tanto del sistema como
+		de los usuarios(claves de acceso, datos personales,...), se recomienda cifrarla o, si se puede 
+		prescindir de ella, omitir dicha partición\cite{swap}. Sin embargo, /boot no se puede cifrar porque
+		es necesaria la encriptación de la carpeta /root\cite{boot}, además, dado que el contenido de dicha
+		carpeta es propio del sistema operativo e idéntico entre sistemas operativos iguales, no tendría mucho
+		sentido.
+		
 		\item ¿Qué otro tipo de usos de una partición le permite configurar el asistente de instalación?
 		¿Cuál es la principal diferencia entre ext4 y ext2?
 		
@@ -301,6 +308,14 @@ Hardware RAID vs. Software RAID: Which Implementation is Best for my Application
 Red Hat Enterprise Linux 3: Manual de administración del sistema.\\
   Capítulo 3. 3.3. Hardware y Software RAID.\\
   \url{http://web.mit.edu/rhel-doc/3/rhel-sag-es-3/s1-raid-approaches.html}
+
+\bibitem{swap}
+Disk Encryption. Archlinux Wiki.\\
+  \url{https://wiki.archlinux.org/index.php/Disk_encryption}
+
+\bibitem{boot}
+Encrypting an entire system. Archlinux Wiki.\\
+  \url{https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system}
 
 \end{thebibliography}
 
