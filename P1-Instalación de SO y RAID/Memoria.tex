@@ -223,7 +223,19 @@
 		
 	\subsection{Ajuste de parámetros de la Máquina Virtual}
 		\item Explique brevemente qué diferencias hay entre los 3 tipos de conexión que permite el
-		VMSW para las Mvs: NAT, Host-only y Bridge.
+		VMSW para las Mvs: NAT, Red NAT, Bridge, Red interna y Host-only.
+		\begin{itemize}
+			\item NAT es equivalente a hacer una red virtual donde sólo se puede conectar una máquina
+			virtual.
+			\item Red NAT: nuestro sistema operativo va a hacer de anfitrión a tantos SO's como
+			queramos, es equivalente a (el sistema operativo simula una capa de red).
+			\item Bridge(adaptador puente): va a "puentear" la pila de red, se hace un filtrado de
+			tráfico de red a transporte, útil para saber qué máquinas hablan con cuáles y similares.
+			Capaz de tener más de una máquina a la vez.
+			\item Red interna: va a "puentear" la pila de red, la diferencia es que el sistema operativo
+			Host y los Guest no se ven.
+			\item Host-only: lo mismo que la anterior pero se pueden ver.
+		\end{itemize}
 		
 	\section{Editores de texto}
 		\item \textbf{Opcional:} ¿Qué relación hay entre los atajos de teclado de emacs y los de
