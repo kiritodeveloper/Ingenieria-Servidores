@@ -93,7 +93,20 @@
 \begin{enumerate}
 	\section{Introducción}
 	\subsection{Concepto de Máquina Virtual y virtualización}
-		\item ¿Qué modos y/o tipos de $"$Virtualización Hardware$"$ existen?(No más de 3 párrafos)
+		\item ¿Qué modos y/o tipos de $"$Virtualización Hardware$"$ existen?
+		\begin{itemize}
+			\item Emulación: La máquina virtual \textit{emula} el hardware, a partir del existente
+			en la máquina, para ejecutar un sistema operativo que normalmente estaba pensado para
+			otro tipo de dispositivo.
+			
+			\item Virtualización completa o nativa: La máquina virtual simula parte del hardware de
+			la máquina para ejecutar un sistema operativo \textit{invitado} de forma autónoma.
+			
+			\item Para-virtualización: Es similar a la virtualización nativa pero con la diferencia
+			de que el sistema \textit{invitado} que se ejecuta está modificado para enviar ciertas
+			peticiones al sistema \textit{anfitrión} que si se ejecutaran en el entorno virtualizado
+			serían mucho menos eficientes.
+		\end{itemize}
 		\cite{Virt}
 		
 		\item Muestre los precios y características de varios proveedores de VPS(Virtual Private
@@ -261,8 +274,8 @@
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
 \bibitem{Virt}
-http://securitywing.com/types-virtualization-technology/
-http://lass.cs.umass.edu/~shenoy/courses/spring11/lectures/Lec05.pdf
+LASS (Laboratory fo Advanced Software Systems)
+  \url{http://lass.cs.umass.edu/~shenoy/courses/spring11/lectures/Lec05.pdf}
 
 \bibitem{Adeos}
 Adaptive Domain Environment for perating Systems. Wikipedia, the free encyclopedia.\\
