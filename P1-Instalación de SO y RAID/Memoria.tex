@@ -267,13 +267,32 @@
 		\item \begin{enumerate}
 			\item ¿Qué es LVM?
 			
+			LVM es un administrador de volúmenes lógicos para el kernel Linux que administra
+			controladores de discos y dispositivos de almacenamiento masivo similares.\cite{LVM}
+			
 			\item ¿Qué ventaja tiene para un servidor de gama baja?
+			
+			Permite la gestión de los discos disponibles y sus particiones de una forma lógica de
+			tal forma que si próximamente una parte se queda sin espacio, podemos fácilmente
+			redimensionarla y tomar espacio de otra a la que le sobre o incorporar un nuevo disco
+			sin necesidad de copiar los datos que necesita guardar, simplemente, lo repartimos
+			entre las particiones disponibles. Esto nos permite realizar \textit{$"$hot swap$"$}
+			de los discos que disponemos si fuese necesario.
 			
 			\item Si va a tener un servidor web, ¿le daría un tamaño grande o pequeño a /var?\\
 			(\href{http://www.tldp.org/HOWTO/LVM-HOWTO/benefitsoflvmsmall.html}
-			{http://www.tldp.org/HOWTO/LVM-HOWTO/benefitsoflvmsmall.html})
+			{http://www.tldp.org/HOWTO/LVM-HOWTO/benefitsoflvmsmall.html})\\
 			(\href{https://wiki.archlinux.org/index.php/LVM#Introduction}
-			{https://wiki.archlinux.org/index.php/LVM$\#$Introduction})\\
+			{https://wiki.archlinux.org/index.php/LVM$\#$Introduction})
+			
+			Dado que el directorio /var es un directorio multipropósito en el cuál se almacenan
+			todos los archivos temporales, log, \dots que necesite usar el sistema operativo\cite{Var}
+			el tamaño que necesitará si pretendemos alojar un servidor web dependerá de las prestaciones
+			que aportemos con dicho servidor, usualmente grande. Como no sabemos a priori si el espacio
+			que le hemos dado será suficiente y es posible que necesitemos ampliarlo, si disponemos de
+			LVM, podemos optar por darle poco espacio inicialmente e irlo redimensionando conforme se
+			requiera más espacio.
+			
 		\end{enumerate}
 		
 		\item ¿Debemos cifrar también el volumen que contiene el espacio para swap? ¿y el volumen
@@ -461,6 +480,15 @@ Hardware RAID vs. Software RAID: Which Implementation is Best for my Application
 Red Hat Enterprise Linux 3: Manual de administración del sistema.\\
   Capítulo 3. 3.3. Hardware y Software RAID.\\
   \url{http://web.mit.edu/rhel-doc/3/rhel-sag-es-3/s1-raid-approaches.html}
+
+\bibitem{LVM}
+Logical Volume Manager. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)}
+
+\bibitem{Var}
+The Linux Documentation Project.\\
+  \url{http://www.tldp.org/LDP/Linux-Filesystem-Hierarchy/html/var.html}
+
 
 \bibitem{swap}
 Disk Encryption. Archlinux Wiki.\\
