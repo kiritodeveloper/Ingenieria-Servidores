@@ -308,6 +308,31 @@
 		\item ¿Qué otro tipo de usos de una partición le permite configurar el asistente de instalación?
 		¿Cuál es la principal diferencia entre ext4 y ext2?
 		
+		El asistente de configuración nos permite seleccionar entre \textbf{ext2}\cite{ext2},
+		\textbf{ext3}\cite{ext3}, \textbf{ext4}\cite{ext4} que suelen ser los sistemas de ficheros más
+		usados; \textbf{btrfs}\cite{btrfs} que se desarrolló como una alternativa a ellos de manos de
+		uno de sus desarrolladores, \textit{Theodore Ts'o}, buscando solventar algunas de las
+		deficiencias de los mismos; \textbf{JFS}\cite{JFS} y \textbf{XFS}\cite{XFS} que están más
+		enfocados a las altas prestaciones así como a archivos de mayor tamaño que a uso habitual
+		aunque también dan buenos resultados; y sistemas de ficheros \textbf{FAT}\cite{FAT} que,
+		junto con \textbf{NTFS}\cite{NTFS}, son más característicos de los sistemas basados en
+		\textbf{DOS}.
+		
+		Ahora bien, centándonos en \textbf{ext2}, \textbf{ext3} y \textbf{ext4}, tenemos que como son
+		mejoras entre ellos, las versiones nuevas tienen las mismas características que sus predecesores
+		e incorporan ciertas soluciones a los problemas que tenían.
+		\newline
+		En concreto, \textbf{ext3} mejora a \textbf{ext2} mediante la indexación (usando árboles
+		\textit{HTree}) de grandes directorios, el crecimiento lineal del sistema de archivos y, la
+		gran diferencia, el \textit{journaling}\cite{journaling}, que consiste en ir guardando las
+		diferencias producidas a diario y así, en caso de un fallo o reinicio inesperado, se permite
+		una recuperación más eficiente del estado del sistema antes de producirse dicho error.
+		\newline
+		Por su parte, \textbf{ext4} mejora a \textbf{ext3} principalmente por la ampliación del tamaño
+		máximo de sus ficheros, el del sistema de archivos en sí y el número máximo de subdirectorios.
+		
+		Aún así, quedan algo alejados de los límites máximos de \textbf{JFS} y \textbf{XFS}.
+		
 		\item Muestre cómo ha quedado el disco particionado una vez el sistema está instalado(lsblk).
 		
 		\item \begin{enumerate}
@@ -471,7 +496,6 @@ W3Techs, Web Technology Surveys.\\
 W3Techs, Web Technology Surveys.\\
   \url{http://w3techs.com/technologies/details/os-linux/all/all}
 
-
 \bibitem{HWvsSW}
 Hardware RAID vs. Software RAID: Which Implementation is Best for my Application?\\
   \url{http://www.adaptec.com/nr/rdonlyres/14b2fd84-f7a0-4ac5-a07a-214123ea3dd6/0/4423_sw_hwraid_10.pdf}
@@ -489,7 +513,6 @@ Logical Volume Manager. Wikipedia, the free encyclopedia.\\
 The Linux Documentation Project.\\
   \url{http://www.tldp.org/LDP/Linux-Filesystem-Hierarchy/html/var.html}
 
-
 \bibitem{swap}
 Disk Encryption. Archlinux Wiki.\\
   \url{https://wiki.archlinux.org/index.php/Disk_encryption}
@@ -497,6 +520,42 @@ Disk Encryption. Archlinux Wiki.\\
 \bibitem{boot}
 Encrypting an entire system. Archlinux Wiki.\\
   \url{https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system}
+
+\bibitem{ext2}
+Ext2. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Ext2}
+
+\bibitem{ext3}
+Ext3. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Ext3}
+
+\bibitem{ext4}
+Ext4. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Ext4}
+
+\bibitem{btrfs}
+Btrfs. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Btrfs}
+
+\bibitem{JFS}
+JFS. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/JFS_(file_system)}
+
+\bibitem{XFS}
+XFS. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/XFS}
+
+\bibitem{FAT}
+FAT. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/File_Allocation_Table}
+
+\bibitem{NTFS}
+NTFS. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/NTFS}
+
+\bibitem{journaling}
+Journaling file system. Wikipedia, the free encyclopedia.\\
+  \url{http://en.wikipedia.org/wiki/Journaling_file_system}
 
 \bibitem{W12_v}
 INTERNET YA, Soluciones Web.\\
