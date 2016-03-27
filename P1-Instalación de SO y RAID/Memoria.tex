@@ -344,13 +344,16 @@
 			
 			Para hacer disco 2 $"$arrancable$"$, localizamos el disco(usando el comando anterior,
 			\textit{lsblk}, por ejemplo), ejecutamos \textit{grub install $<$dirección del dispositivo$>$}
-			y finalmente, ejecutamos \textit{update-grub}. La salida por pantalla sería:
+			y finalmente, ejecutamos \textit{update-grub} para generar el archivo de menu.lst de GRUB.
+			La salida por pantalla sería:
 			
 			\includegraphics[width=15cm]{Ejercicio_13.jpg}
 			
 			\item ¿Qué hace el comando grub-install?
 			
-			Al usar \textit{update-grub} se genera el archivo de menu.lst de GRUB\cite{man_update-grub}.
+			El comando \textit{grub-install} instala un \textbf{GRUB} (\textit{GNU GRand Unified
+			Bootloader}) en el dispositivo que se le pasa como parámetro con las opciones indicadas
+			\cite{man_grub-install}.
 			
 			\item ¿Qué hace el comando dd?
 			
@@ -361,6 +364,8 @@
 		
 		\item \textbf{Opcional:} Muestre(con capturas de pantalla) cómo ha comprobado que el RAID1
 		funciona.
+		
+		
 		
 	\subsection{Windows Server}
 		\item ¿Qué diferencia hay entre Standard y Datacenter?
@@ -573,10 +578,10 @@ NTFS. Wikipedia, the free encyclopedia.\\
 Journaling file system. Wikipedia, the free encyclopedia.\\
   \url{http://en.wikipedia.org/wiki/Journaling_file_system}
 
-\bibitem{man_update-grub}
+\bibitem{man_grub-install}
 Ubuntu manuals\\
-update-grub(8) - Linux man page\\
-  \url{http://manpages.ubuntu.com/manpages/hardy/man8/update-grub.8.html}
+grub-install(8) - Linux man page\\
+  \url{http://manpages.ubuntu.com/manpages/trusty/en/man8/grub-install.8.html}
 
 \bibitem{man_dd}
 Ubuntu manuals\\
