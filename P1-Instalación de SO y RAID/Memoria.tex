@@ -438,8 +438,17 @@
 	\section{Editores de texto}
 		\item \textbf{Opcional:} ¿Qué relación hay entre los atajos de teclado de emacs y los de
 		la consola de bash?¿y entre los de vi y las páginas del manual?
-		Son similares en avance de página y otras funciones de lectura. Por qué la similitud? Las
-		funciones estaban implementadas en emacs y lo cogieron.
+		
+		Los atajos de teclado de \textbf{emacs} y los de \textbf{bash} son similares porque \textbf{bash}
+		\cite{man_bash} usa \textbf{GNU Readline Library}\cite{GNURL} como interfaz de edición de texto,
+		y esta librería tiene dos modos, basados en los editores de textos \textbf{emacs} y \textbf{vi}
+		pero por defecto usa \textbf{emacs} aunque se puede cambiar fácilmente.
+		
+		El por qué los comandos de las páginas del manual son similares a las de \textbf{vi} es porque
+		el comando \textit{man} utiliza al comando \textit{less} como podemos ver en el apartado del
+		parámetro $"-r"$ en \cite{man_man} y a su vez, los atajos del comando \textit{less} están
+		basados en los de \textit{more} y \textbf{vi} como podemos ver en \cite{man_less}.
+		
 		
 		
 \end{enumerate}
@@ -634,6 +643,27 @@ dd(1) - Linux man page\\
 INTERNET YA, Soluciones Web.\\
 Windows Server 2012 – Ediciones Datacenter y Standard.\\
   \url{http://www.internetya.co/windows-server-2012-ediciones-datacenter-y-standard/}
+
+\bibitem{man_bash}
+GNU Operating System\\
+Bash Reference Manual\\
+\url{http://www.gnu.org/software/bash/manual/bash.html}
+
+\bibitem{GNURL}
+GNU Operating System\\
+The GNU Readline Library\\
+\url{http://www.gnu.org/s/readline/}
+
+\bibitem{man_man}
+Ubuntu manuals\\
+man(1) - Linux man page\\
+\url{http://manpages.ubuntu.com/manpages/precise/en/man1/man.1.html}
+
+\bibitem{man_less}
+Ubuntu manuals\\
+less(1) - Linux man page\\
+\url{http://manpages.ubuntu.com/manpages/hardy/man1/less.1.html}
+
 \end{thebibliography}
 
 
