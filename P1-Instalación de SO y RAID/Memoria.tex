@@ -468,7 +468,7 @@
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
 \bibitem{Virt}
-LASS (Laboratory fo Advanced Software Systems)
+LASS (Laboratory fo Advanced Software Systems)\\
   \url{http://lass.cs.umass.edu/~shenoy/courses/spring11/lectures/Lec05.pdf}
 
 \bibitem{VMSW}
@@ -669,6 +669,13 @@ less(1) - Linux man page\\
 \url{http://manpages.ubuntu.com/manpages/hardy/man1/less.1.html}
 
 \end{thebibliography}
+
+A lo largo del texto, tendrá que incluir referencias, para ello puede usar las notas a pie de página con \textbackslash footnote \footnote{Este es un ejemplo} o añadiendo citas con \textbackslash cite \cite{1,2}. \LaTeX puede gestionar las referencias mediante BibTex, que genera entradas bbl a partir de un archivo .bib. También puede incluirlas directamente en el documento fuente como entradas dentro de una sección (thebibliography) dentro del mismo documento (son las generadas en el archivo .bbl por BibTex). No obstante, se recomienda el uso del archivo .bib como buena práctica a seguir cuando se trabaje con \LaTeX.
+
+Para incluir las referencias usaremos la etiqueta \textbackslash bibliography especificando su estilo: \textbackslash bibliographystyle que, en nuestro caso, es plain.
+%------------------------------------------------
+\bibliography{guion} %archivo citas.bib que contiene las entradas 
+\bibliographystyle{plain} % hay varias formas de citar
 
 
 \end{document}
