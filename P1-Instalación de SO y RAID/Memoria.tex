@@ -337,7 +337,11 @@
 		
 		El disco ha quedado como muestra la imagen siguiente:
 		
-		\includegraphics{Ejercicio_12.jpg}
+		\begin{figure}
+			\centering
+			\includegraphics{Ejercicio_12.jpg}
+			\caption{Particionamiento final del disco.} 	
+		\end{figure}
 		
 		\item \begin{enumerate}
 			\item ¿Cómo ha hecho el disco 2 $"$arrancable$"$?
@@ -347,8 +351,12 @@
 			y finalmente, ejecutamos \textit{update-grub} para generar el archivo de menu.lst de GRUB.
 			La salida por pantalla sería:
 			
-			\includegraphics{Ejercicio_13.jpg}
-			
+			\begin{figure}
+				\centering
+				\includegraphics{Ejercicio_13.jpg}
+				\caption{Ejecución de grub-install.} 	
+			\end{figure}
+
 			\item ¿Qué hace el comando grub-install?
 			
 			El comando \textit{grub-install} instala un \textbf{GRUB} (\textit{GNU GRand Unified
@@ -385,11 +393,19 @@
 		En este caso, pulsamos botón derecho sobre el volumen que tenemos y seleccionamos
 		\textit{$"$Add Mirror...$"$} como podemos ver en la figura:
 		
-		\includegraphics[width=10cm]{Ejercicio_16a.jpg}
+		\begin{figure}
+			\centering
+			\includegraphics[width=10cm]{Ejercicio_16a.jpg}
+			\caption{RAID1 en Windows. Primer caso. 1/3} 	
+		\end{figure}
 		
 		Seleccionamos el disco que queremos añadir como espejo:
 		
-		\includegraphics[width=10cm]{Ejercicio_16b.jpg}
+		\begin{figure}
+			\centering
+			\includegraphics[width=10cm]{Ejercicio_16b.jpg}
+			\caption{RAID1 en Windows. Primer caso. 2/3} 	
+		\end{figure}
 		
 		Nos dará un aviso por el hecho de que se convertirá a disco dinámico y las consecuencias que
 		implican, suponemos que como ese disco se utilizará sólo para almacenar datos, no se instalará
@@ -397,26 +413,41 @@
 		
 		Y el resultado es:
 		
-		\includegraphics[width=10cm]{Ejercicio_16c.jpg}
-		
+		\begin{figure}
+			\centering
+			\includegraphics[width=10cm]{Ejercicio_16c.jpg}
+			\caption{RAID1 en Windows. Primer caso. 3/3} 	
+		\end{figure}
+
 		\textbf{Segundo caso: tenemos desde el principio los discos que queremos convertir en RAID1}
 		
 		En este caso, pulsamos botón derecho sobre uno de los volúmenes que tenemos y seleccionamos
 		\textit{$"$New Mirrored Volume...$"$} como podemos ver en la figura:
 		
-		\includegraphics[width=10cm]{Ejercicio_16d.jpg}
+		\begin{figure}
+			\centering
+			\includegraphics[width=10cm]{Ejercicio_16d.jpg}
+			\caption{RAID1 en Windows. Segundo caso. 1/3} 	
+		\end{figure}
 		
 		Seleccionamos los discos que queremos añadir al RAID1, más adelante nos preguntará el nombre
 		que le daremos al disco, si lo queremos formatear y qué formato en dicho caso(lo dejaremos
 		en las opciones por defecto, Unidad E: y formatearlo a NTFS):
 		
-		\includegraphics[width=10cm]{Ejercicio_16e.jpg}
-		
+		\begin{figure}
+			\centering
+			\includegraphics[width=10cm]{Ejercicio_16e.jpg}
+			\caption{RAID1 en Windows. Segundo caso. 2/3} 	
+		\end{figure}
+
 		Nos vuelve a saltar la advertencia de que vamos a convertir los discos en dinámicos y la 
 		volvemos a ignorar. Y el resultado es idéntico al del otro caso:
 		
-		\includegraphics[width=10cm]{Ejercicio_16f.jpg}
-		
+		\begin{figure}
+			\centering
+			\includegraphics[width=10cm]{Ejercicio_16f.jpg}
+			\caption{RAID1 en Windows. Segundo caso. 3/3} 	
+		\end{figure}
 		
 		
 	\subsection{Ajuste de parámetros de la Máquina Virtual}
