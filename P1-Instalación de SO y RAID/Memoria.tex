@@ -445,10 +445,12 @@
 		\item Explique brevemente qué diferencias hay entre los 5 tipos de conexión que permite el
 		VMSW para las Mvs: NAT, Red NAT, Bridge, Red interna y Host-only.
 		\begin{itemize}
-			\item NAT: %es equivalente a hacer una red virtual donde sólo se puede conectar una máquina
-			%virtual.
-			\item Red NAT: %nuestro sistema operativo va a hacer de anfitrión a tantos SO's como
-			%queramos, es equivalente a (el sistema operativo simula una capa de red).
+			\item NAT: permite a los sistemas operativos conectarse a internet usando a la máquina
+			virtual como router para conectarse. Como limitaciones tiene que los distintos dispositivos
+			conectados como \textit{invitados} no se pueden ver entre ellos y desde internet son
+			invisibles (dificultando que puedan ofrecer un servidor).
+			\item Red NAT: Similar a \textbf{NAT} pero se establece una red interna que permite la
+			conexión entre los dispositivos \textit{invitados} que estén conectados.
 			\item Bridge(adaptador puente): %va a "puentear" la pila de red, se hace un filtrado de
 			%tráfico de red a transporte, útil para saber qué máquinas hablan con cuáles y similares.
 			%Capaz de tener más de una máquina a la vez.
