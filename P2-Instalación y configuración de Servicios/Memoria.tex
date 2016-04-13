@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment LaTeX Template Version 1.0 (5/5/12)
+% This template has been downloaded from: http://www.LaTeXTemplates.com
+% Original author:  Frits Wenneker (http://www.howtotex.com)
+% License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+% ---- Entrada y salida de texto -----
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+
+% ---- Idioma --------
+
+\usepackage[spanish, es-tabla]{babel} % Selecciona el español para palabras introducidas automáticamente, p.ej. "septiembre" en la fecha y especifica que se use la palabra Tabla en vez de Cuadro
+
+% ---- Otros paquetes ----
+
+% Hipervínculos
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{graphics,graphicx, float, url} %para incluir imágenes y colocarlas
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO Y DATOS DEL ALUMNO
+%----------------------------------------------------------------------------------------
+
+\title{	
+\normalfont \normalsize 
+\textsc{{\bf Ingeniería de Servidores (2015-2016)} \\ Doble Grado en Ingeniería Informática y Matemáticas \\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Memoria Práctica 2 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Óscar Bermúdez Garrido\\ \href{http://www.github.com/oxcar103}{@oxcar103}} % Nombre y apellidos
+
+\date{\normalsize\today} % Incluye la fecha actual
+
+%----------------------------------------------------------------------------------------
+% DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle % Muestra el Título
+\newpage %inserta un salto de página
+\tableofcontents % para generar el índice de contenidos
+\listoffigures
+
+\begin{enumerate}
+	\section{Instalación de servicios y configuración}
+	\subsection{yum}
+	\item Liste los argumentos de yum necesarios para instalar, buscar y eliminar paquetes.
+	
+	\item ¿Qué ha de hacer para que yum pueda tener acceso a Internet?\footnote{Pista: archivo de
+	configuración en /etc, proxy: stargate.ugr.es:3128} ¿Cómo añadimos un nuevo repositorio?
+	
+	\subsection{apt}
+	\item Indique el comando para buscar un paquete en un repositorio y el correspondiente para instalarlo.
+
+	\item Indique qué ha modificado para que apt para acceder a los servidores de paquetes a través de
+	proxy. ¿Cómo añadimos un nuevo repositorio?
+	
+	\subsection{Windows}
+	\subsection{OpenSuse}
+	\item ¿Qué gestores utiliza OpenSuse?\footnote{Pista: \url{http://es.opensuse.org/Gestión_de_paquetes}}
+	
+	\section{Gestión de los cortafuegos(\textit{Firewalls})}
+	\section{Instalación del servicio de acceso remoto a la consola(\textit{Secure Shell})}
+	\item ¿Qué diferencia hay entre telnet y ssh?
+	
+	\item ¿Para qué sirve la opción \textbf{-X}? Ejecute remotamente, es decir, desde la máquina
+	anfitriona (si tiene Linux) o desde la otra máquina virtual, el comando \textit{gedit} en una sesión
+	abierta con \textit{ssh}. ¿Qué ocurre?
+	
+	\item Muestre la secuencia de comandos y las modificaciones a los archivos correspondientes para
+	permitir acceder a la consola remota sin introducir la contraseña\footnote{Pista: ssh-keygen, ssh-copy-id}.
+
+	\item ¿Qué archivo es el que contiene la configuración de sshd? ¿Qué parámetro hay que modificar
+	para evitar que el usuario root acceda? Cambie el puerto por defecto y compruebe que puede acceder.
+
+	\item Indique si es necesario reiniciar el servicio. ¿Cómo se reinicia un servicio en Ubuntu?
+	¿Y en CentOS? Muestre la secuencia de comandos para hacerlo.
+	
+	\subsection{Utilidades: screen y terminator}
+	\item Instale y pruebe \textit{terminator}. Con \textit{screen}, pruebe su funcionamiento dejando
+	sesiones \textit{ssh} abiertas en el servidor y recuperándolas posteriomente.
+	
+	\subsection{Un poco de seguridad: \textit{fail2ban}}
+	\item Instale el servicio y pruebe su funcionamiento.
+	
+	\section{Administración remota de Windows}
+	\section{Instalación de un servidor web básico}
+	\subsection{Instalación de Apache + MySQL (o MariaDB) + PHP (o Python) en Linux(\textit{LAMP})}
+	\item Muestre los comandos que ha utilizado en Ubuntu Server y en CentOS (aunque en este último puede
+	utilizar la GUI; en tal caso, realice capturas de pantalla).
+	
+	\item Enumere otros servidores web y las páginas de sus proyectos (mínimo 3 sin considerar Apache,
+	IIS ni nginx).
+	
+	\subsection{Windows: IIS}
+	\item Compruebe que el servicio está funcionando accediendo a la MV a través de la anfitriona.
+	
+	\subsection{Windows y otros servidores web}
+	\subsection{Java Servlets}
+	\item Realice la instalación de uno de estos dos \textit{web containers} y pruebe su ejecución.
+	
+	
+	\subsection{Otro tipo de Bases de datos}
+	\item Realice la instalación de MongoDB en alguna de sus máquinas virtuales. Cree una colección de
+	documentos y haga una consulta sobre ellos \footnote{\url{http://docs.mongodb.org/manual/installation/}}.
+	
+	
+	\section{Manteniendo de los servicios actualizados}
+	\item Muestre un ejemplo de uso del comando \footnote{\url{http://fedoraproject.org/wiki/VMWare}}
+	
+	\section{Administración web}
+	\item Realice la instalación de esta aplicación y pruebe a modificar algún parámetro de algún
+	servicio. Muestre las capturas de pantalla pertinentes así como el proceso de instalación.
+	
+	\item Instale \textit{phpMyAdmin}, indique cómo lo ha realizado y muestre algunas capturas de
+	pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
+	Indique cómo ha realizado el proceso y muestre capturas de pantalla.
+	
+	\subsection{Más administradores: Ispconfig, Directadmin, C-Panel, Parallels,\dots}
+	\item Visite al menos una de las webs de los software mencionados y pruebe las demos que ofrecen
+	realizando capturas de pantalla y comentando qué está realizando.
+	
+	\section{Automatización de tareas con scripts}
+	\subsection{Shells}
+	\subsubsection*{Comandos grep, find, awk y sed}
+	\item Ejecute los ejemplos de find, grep y escriba el script que haga uso de sed para cambiar la
+	configuración de ssh y reiniciar el servicio.
+	
+	\item Muestre un ejemplo de uso para awk.
+	
+	\subsection{PHP}
+	\subsection{Python}
+	\item Escriba el script para cambiar el acceso a ssh usando PHP o Python.
+	
+	\subsection{Windows PowerShell}
+	\item Abra una consola de \textit{Powershell} y pruebe a parar un programa en ejecución, realice
+	capturas de pantalla y comente lo que muestra. También puede realizar otra tarea de su elección.
+	
+	\subsection{Más automatización}
+	
+\end{enumerate}
+
+\newpage
+\section{Referencias}
+\input{Bibliografia.tex}
+
+\end{document}
