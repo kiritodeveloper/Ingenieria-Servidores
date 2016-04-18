@@ -131,8 +131,8 @@
 	\item Muestre los comandos que ha utilizado en Ubuntu Server y en CentOS (aunque en este último puede
 	utilizar la GUI; en tal caso, realice capturas de pantalla).
 	
-	% En Ubuntu, usaremos \textbf{lamp-server^}
-	% En CentOS, usaremos \textbf{httpct} para instalar Apache, \textbf{mariadb} para Maria-DB, \textbf{php} y \textbf{php-mysql} para PHP
+	% En Ubuntu, usaremos \textbf{lamp-server^} para instalar LAMP.
+	% En CentOS, usaremos \textbf{httpd} para instalar Apache, \textbf{mariadb} para Maria-DB, \textbf{php} y \textbf{php-mysql} para PHP y añadiremos Apache a la lista de ejecuciones durante el arranque con \textit{systemctl enable httpd.service}, ahora lo inicializamos con \textit{systemctl start httpd.service} y ejecutamos además \textit{sudo firewall-cmd --permanent --add-service http} y reiniciamos el servicio con \textit{systemcl restart firewalld.service} para que los cambios surtan efecto.
 	
 	\item Enumere otros servidores web y las páginas de sus proyectos (mínimo 3 sin considerar Apache,
 	IIS ni nginx).
