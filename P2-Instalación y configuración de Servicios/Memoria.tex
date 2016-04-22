@@ -93,7 +93,17 @@
 	
 	\subsection{apt}
 	\item Indique el comando para buscar un paquete en un repositorio y el correspondiente para instalarlo.
-
+	
+	Basado en \cite{man_apt-cache} y \cite{man_apt-get}:
+	
+	\textbf{Para buscar:} \textit{apt-cache search $<$patrón$>$}, por ejemplo: \textit{apt-cache search sl}.
+	
+	\textbf{Para instalar:} \textit{sudo apt-get install $<$paquete$>$}, por ejemplo: \textit{sudo apt-get
+	install oneko}.
+	
+	\textbf{Para eliminar:} \textit{sudo apt-get remove $<$paquete$>$}, por ejemplo: \textit{sudo apt-get
+	remove bsd-games}.
+	
 	\item Indique qué ha modificado para que apt para acceder a los servidores de paquetes a través de
 	proxy. ¿Cómo añadimos un nuevo repositorio?
 	
