@@ -91,6 +91,16 @@
 	\item ¿Qué ha de hacer para que yum pueda tener acceso a Internet?\footnote{Pista: archivo de
 	configuración en /etc, proxy: stargate.ugr.es:3128} ¿Cómo añadimos un nuevo repositorio?
 	
+	Para hacer que yum pueda acceder a Internet a través de un proxy, debemos modificar el archivo
+	\textit{/etc/yum/yum.conf}, con el comando \textit{nano} por ejemplo, y añadir la variable
+	\textit{proxy} con el valor del proxy(en este caso, \textit{stargate.ugr.es:3128}) como podemos
+	ver en \cite{man_yum.conf}, \cite{CentOS_web} y \cite{foro_Fedora}.
+	
+	Para añadir nuevos repositorios podemos instalar el paquete \textit{yum-utils} y añadir nuevos
+	repositorios usando el comando \textit{yum-config-manager} tal y como nos indica su propio manual
+	\cite{man_yum-config-manager}. O podemos incluir directamente la dirección del repositorio en
+	\textit{/etc/yum/yum.conf} como se indica en \cite{man_yum.conf}.
+	
 	\subsection{apt}
 	\item Indique el comando para buscar un paquete en un repositorio y el correspondiente para instalarlo.
 	
