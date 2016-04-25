@@ -170,11 +170,14 @@
 	% Crear un usuario en Windows
 	% Crear un servidor FTP(permitiendo usuario anterior)
 	% Firewall puerto 21
-	
+	% Activamos el ping accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> File and Printer Sharing...
+	% Activamos el puerto de entrada accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> New Rule -> Port -> 21 -> Permitir -> <Nombre>
+	% Reiniciamos el firewall en Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Services -> <Lo buscamos y reiniciamos>
+	% Creamos un usuario accediendo a Administrative Tools -> Server Management -> Configuration -> Local Users and Groups -> Users
+	% Administrative Tools -> Server Management -> Roles -> Web Server(IIS) -> Internet Information Services -> Add FTP Service y lo configuramos como queramos.
 	\subsection{Windows y otros servidores web}
 	\subsection{Java Servlets}
 	\item Realice la instalación de uno de estos dos \textit{web containers} y pruebe su ejecución.
-	
 	
 	\subsection{Otro tipo de Bases de datos}
 	\item Realice la instalación de MongoDB en alguna de sus máquinas virtuales. Cree una colección de
