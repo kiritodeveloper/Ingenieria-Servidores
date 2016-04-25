@@ -203,7 +203,13 @@
 	\section{Administración web}
 	\item Realice la instalación de esta aplicación y pruebe a modificar algún parámetro de algún
 	servicio. Muestre las capturas de pantalla pertinentes así como el proceso de instalación.
-	% Visitar http://www.webmin.com/deb.html y obedecer
+	% Visitar http://www.webmin.com/deb.html y obedecer o forma alternativa:
+	% En /etc/apt/sources.list, escribimos deb http://download.webmin.com/download/repository sarge contrib
+	% En /etc/apt/sources.list, escribimos deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
+	% wget http://www.webmin.com/jcameron-key.asc
+	% apt-key add jcameron-key.asc
+	% apt-get update
+	% apt-get install -y webmin
 	
 	\item Instale \textit{phpMyAdmin}, indique cómo lo ha realizado y muestre algunas capturas de
 	pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
@@ -218,6 +224,13 @@
 	\subsubsection*{Comandos grep, find, awk y sed}
 	\item Ejecute los ejemplos de find, grep y escriba el script que haga uso de sed para cambiar la
 	configuración de ssh y reiniciar el servicio.
+	
+	% Visitar https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux
+	% Sugerencia:
+	% 	Entrada: sshd_config
+	% 	Buscar línea donde se especifica el puerto
+	% 	Sustituir el puerto por 103
+	% 	Reiniciar el servicio
 	
 	\item Muestre un ejemplo de uso para awk.
 	
