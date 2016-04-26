@@ -118,6 +118,18 @@
 	\item Indique qué ha modificado para que apt para acceder a los servidores de paquetes a través de
 	proxy. ¿Cómo añadimos un nuevo repositorio?
 	
+	Para hacer que apt pueda acceder a Internet a través de un proxy, debemos modificar
+	el archivo \textit{/etc/apt/apt.conf}, con el comando \textit{nano} por ejemplo, y
+	añadir la variable \textit{http\_proxy} con el valor del proxy(en este caso,
+	\textit{stargate.ugr.es:3128}) como podemos ver en \cite{man_apt.conf}.
+	
+	Para añadir nuevos repositorios podemos usar el comando \textit{add-apt-repository}
+	tal y como nos indica su propio manual \cite{man_add-apt-repository}. O podemos
+	incluir directamente la dirección del repositorio en \textit{/etc/apt/sources.list}
+	ya que en \cite{man_apt} se indica que utilicemos \textit{apt edit-sources} para este
+	propósito pero lo único que hace este comando es abrirnos el archivo antes citado para
+	su edición.
+
 	\subsection{Windows}
 	\subsection{OpenSuse}
 	\item ¿Qué gestores utiliza OpenSuse?\footnote{Pista: \url{http://es.opensuse.org/Gestión_de_paquetes}}
