@@ -154,6 +154,12 @@
 	\section{Instalación del servicio de acceso remoto a la consola(\textit{Secure Shell})}
 		\item ¿Qué diferencia hay entre telnet y ssh?
 		
+		La principal diferencia entre ambos protocolos de red es la seguridad\cite{Telnet}\cite{SSH}.
+		De hecho, SSH se diseñó para reemplazar a algunos protocolos de red como Telnet mediante
+		la solución del problema que tenía estos protocolos, que era que no ofrecían confidencialidad
+		en redes poco seguras como las redes públicas y podían ser atacados por terceras personas
+		conectadas a dicha red. SSH para solucionarlo, encripta los datos.
+	
 		\item ¿Para qué sirve la opción \textbf{-X}? Ejecute remotamente, es decir, desde la máquina
 		anfitriona (si tiene Linux) o desde la otra máquina virtual, el comando \textit{gedit} en una
 		sesión abierta con \textit{ssh}. ¿Qué ocurre?
