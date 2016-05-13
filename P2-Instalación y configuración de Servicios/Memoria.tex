@@ -176,11 +176,69 @@
 		\item Muestre la secuencia de comandos y las modificaciones a los archivos correspondientes
 		para permitir acceder a la consola remota sin introducir la contraseña\footnote{Pista: ssh-keygen,
 		ssh-copy-id}.
-	
+		
+		Primero, configuramos el acceso para que sea posible desde el host, como se nos indica en
+		\cite{SSH_StackOverFlow}.
+		
+		Después, ejecutamos \textit{ipconfig} para ver nuestra IP y la del dispositivo que queremos
+		conectar:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_8a.jpg}
+			\caption{Tabla de direcciones generada por \textit{ipconfig}.}
+			\label{fig:ipconfig}	
+		\end{figure}
+		
+		La nuestra sería \textbf{192.168.1.103} y la de Ubuntu Server,\textbf{192.168.1.101}.
+		
+		Una vez, hecho esto, intentamos acceder por ssh y ejecutamos \textit{ifconfig} para ver que
+		efectivamente, estamos dentro, como se ve en la siguiente captura:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_8b.jpg}
+			\caption{Prueba del funcionamiento de \textit{ssh} sin clave}
+			\label{fig:test_1}	
+		\end{figure}
+		
+		Ahora, usando el comando \textit{ssh-keygen} \cite{man_ssh-keygen}, generaremos un par de
+		claves pública-privada en Ubuntu Server. En los archivos \textit{id\_rsa} y \textit{id\_rsa.pub}
+		\footnote{Nótese que el nombre del archivo se puede cambiar como bien se indica en
+		\cite{man_ssh-keygen}.} quedará registrada la clave pública que se usará para conectar con
+		Ubuntu Server, estos archivos los llevaremos al sistema operativo host. Para ello, usaremos
+		\textit{ssh-copy-id} \cite{man_ssh-copy-id}.
+		
+		El proceso y el resultado(una conexión sin pedir la contraseña), se puede ver en la imagen:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_8c.jpg}
+			\caption{Prueba del funcionamiento de \textit{ssh} con clave.}
+			\label{fig:test_2}	
+		\end{figure}
+		
+		
+		\item En muchas ocasiones es necesario reiniciar un servicio para que tome los cambios
+		en su configuración. Indique los comandos que puede emplear en Ubuntu y CentOS para
+		hacerlo.
+		
+		Basándonos en \cite{cyberciti1} y \cite{cyberciti2}, podemos ver varias formas de
+		reiniciar un servicio.
+		
+		Tomando como ejemplo el servicio SSH, en Fedora, CentOS o similares, se utilizaría
+		\textit{/etc/init.d/sshd restart} o \textit{service sshd restart}.
+		
+		Mientras que en Debian, Ubuntu o similares, sería \textit{/etc/init.d/ssh restart}
+		o \textit{service sshd restart}.
+		
+		También se puede hacer utilizando \textit{sudo restart ssh}.
+		
+		
 		\item ¿Qué archivo es el que contiene la configuración de sshd? ¿Qué parámetro hay que modificar
 		para evitar que el usuario root acceda? Cambie el puerto por defecto y compruebe que puede
 		acceder.
-	
+		
 		\item Indique si es necesario reiniciar el servicio. ¿Cómo se reinicia un servicio en Ubuntu?
 		¿Y en CentOS? Muestre la secuencia de comandos para hacerlo.
 	
