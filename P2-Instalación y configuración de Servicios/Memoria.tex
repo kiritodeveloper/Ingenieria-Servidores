@@ -75,208 +75,214 @@
 \begin{enumerate}
 	\section{Instalación de servicios y configuración}
 	\subsection{yum}
-	\item Liste los argumentos de yum necesarios para instalar, buscar y eliminar paquetes.
-	
-	Basado en \cite{man_yum}:
-	
-	\textbf{Para instalar:} \textit{sudo yum install $<$paquete$>$}, por ejemplo: \textit{sudo yum
-	install oneko}.
-	
-	\textbf{Para buscar:} \textit{yum search $<$expresión$>$}, por ejemplo: \textit{yum search sl}.
-	
-	\textbf{Para eliminar:} \textit{sudo yum remove $<$paquete$>$}, por ejemplo: \textit{sudo yum
-	remove bsd-games}.
-	
-	
-	\item ¿Qué ha de hacer para que yum pueda tener acceso a Internet?\footnote{Pista: archivo de
-	configuración en /etc, proxy: stargate.ugr.es:3128} ¿Cómo añadimos un nuevo repositorio?
-	
-	Para hacer que yum pueda acceder a Internet a través de un proxy, debemos modificar el archivo
-	\textit{/etc/yum/yum.conf}, con el comando \textit{nano} por ejemplo, y añadir la variable
-	\textit{proxy} con el valor del proxy(en este caso, \textit{stargate.ugr.es:3128}) como podemos
-	ver en \cite{man_yum.conf}, \cite{CentOS_web} y \cite{foro_Fedora}.
-	
-	Para añadir nuevos repositorios podemos instalar el paquete \textit{yum-utils} y añadir nuevos
-	repositorios usando el comando \textit{yum-config-manager} tal y como nos indica su propio manual
-	\cite{man_yum-config-manager}. O podemos incluir directamente la dirección del repositorio en
-	\textit{/etc/yum/yum.conf} como se indica en \cite{man_yum.conf}.
+		\item Liste los argumentos de yum necesarios para instalar, buscar y eliminar paquetes.
+		
+		Basado en \cite{man_yum}:
+		
+		\textbf{Para instalar:} \textit{sudo yum install $<$paquete$>$}, por ejemplo: \textit{sudo yum
+		install oneko}.
+		
+		\textbf{Para buscar:} \textit{yum search $<$expresión$>$}, por ejemplo: \textit{yum search sl}.
+		
+		\textbf{Para eliminar:} \textit{sudo yum remove $<$paquete$>$}, por ejemplo: \textit{sudo yum
+		remove bsd-games}.
+		
+		
+		\item ¿Qué ha de hacer para que yum pueda tener acceso a Internet?\footnote{Pista: archivo de
+		configuración en /etc, proxy: stargate.ugr.es:3128} ¿Cómo añadimos un nuevo repositorio?
+		
+		Para hacer que yum pueda acceder a Internet a través de un proxy, debemos modificar el archivo
+		\textit{/etc/yum/yum.conf}, con el comando \textit{nano} por ejemplo, y añadir la variable
+		\textit{proxy} con el valor del proxy(en este caso, \textit{stargate.ugr.es:3128}) como podemos
+		ver en \cite{man_yum.conf}, \cite{CentOS_web} y \cite{foro_Fedora}.
+		
+		Para añadir nuevos repositorios podemos instalar el paquete \textit{yum-utils} y añadir nuevos
+		repositorios usando el comando \textit{yum-config-manager} tal y como nos indica su propio
+		manual \cite{man_yum-config-manager}. O podemos incluir directamente la dirección del repositorio
+		en \textit{/etc/yum/yum.conf} como se indica en \cite{man_yum.conf}.
 	
 	\subsection{apt}
-	\item Indique el comando para buscar un paquete en un repositorio y el correspondiente para instalarlo.
-	
-	Basado en \cite{man_apt-cache} y \cite{man_apt-get}:
-	
-	\textbf{Para buscar:} \textit{apt-cache search $<$expresión$>$}, por ejemplo: \textit{apt-cache
-	search sl}.
-	
-	\textbf{Para instalar:} \textit{sudo apt-get install $<$paquete$>$}, por ejemplo: \textit{sudo apt-get
-	install oneko}.
-	
-	\textbf{Para eliminar:} \textit{sudo apt-get remove $<$paquete$>$}, por ejemplo: \textit{sudo apt-get
-	remove bsd-games}.
-	
-	\item Indique qué ha modificado para que apt para acceder a los servidores de paquetes a través de
-	proxy. ¿Cómo añadimos un nuevo repositorio?
-	
-	Para hacer que apt pueda acceder a Internet a través de un proxy, debemos modificar el archivo
-	\textit{/etc/apt/apt.conf}, con el comando \textit{nano} por ejemplo, y añadir la variable
-	\textit{http\_proxy} con el valor del proxy(en este caso, \textit{stargate.ugr.es:3128}) como
-	podemos ver en \cite{man_apt.conf}.
-	
-	Para añadir nuevos repositorios podemos usar el comando \textit{add-apt-repository} tal y como
-	nos indica su propio manual \cite{man_add-apt-repository}. O podemos incluir directamente la
-	dirección del repositorio en \textit{/etc/apt/sources.list} ya que en \cite{man_apt} se indica
-	que utilicemos \textit{apt edit-sources} para este propósito pero lo único que hace este comando
-	es abrirnos el archivo antes citado para su edición.
+		\item Indique el comando para buscar un paquete en un repositorio y el correspondiente para
+		instalarlo.
+		
+		Basado en \cite{man_apt-cache} y \cite{man_apt-get}:
+		
+		\textbf{Para buscar:} \textit{apt-cache search $<$expresión$>$}, por ejemplo: \textit{apt-cache
+		search sl}.
+		
+		\textbf{Para instalar:} \textit{sudo apt-get install $<$paquete$>$}, por ejemplo: \textit{sudo
+		apt-get install oneko}.
+		
+		\textbf{Para eliminar:} \textit{sudo apt-get remove $<$paquete$>$}, por ejemplo: \textit{sudo
+		apt-get remove bsd-games}.
+		
+		\item Indique qué ha modificado para que apt para acceder a los servidores de paquetes a través
+		de proxy. ¿Cómo añadimos un nuevo repositorio?
+		
+		Para hacer que apt pueda acceder a Internet a través de un proxy, debemos modificar el archivo
+		\textit{/etc/apt/apt.conf}, con el comando \textit{nano} por ejemplo, y añadir la variable
+		\textit{http\_proxy} con el valor del proxy(en este caso, \textit{stargate.ugr.es:3128}) como
+		podemos ver en \cite{man_apt.conf}.
+		
+		Para añadir nuevos repositorios podemos usar el comando \textit{add-apt-repository} tal y como
+		nos indica su propio manual \cite{man_add-apt-repository}. O podemos incluir directamente la
+		dirección del repositorio en \textit{/etc/apt/sources.list} ya que en \cite{man_apt} se indica
+		que utilicemos \textit{apt edit-sources} para este propósito pero lo único que hace este comando
+		es abrirnos el archivo antes citado para su edición.
 	
 	\subsection{Windows}
 	\subsection{openSUSE}
-	\item ¿Qué gestores utiliza openSUSE?\footnote{Pista: \url{http://es.opensuse.org/Gestión_de_paquetes}}
-	
-	Como podemos ver en \cite{oS_packman}, de forma nativa openSUSE utiliza dos gestores de paquetes:
-	
-	\begin{itemize}
-		\item \textbf{YaST}\cite{oS_YaST}(\textit{Yet another Setup Tool}) para la gestión de manera
-		gráfica.
-		\item \textbf{Zypper}\cite{oS_zypper} para la gestión por línea de comandos.
-	\end{itemize}
-	
-	De hecho, ambos servicios están colgados de forma abierta y permitiendo no sólo ver el código que
-	utilizan si no también proponer cómo corregir un bug encontrado, reportarlo o simplemente crear
-	nuestro propio gestor de paquetes basado en alguno de ellos\cite{oS_YaST_GitHub}\cite{oS_zypper_GitHub}.
-	
-	Ambos se distribuyen bajo la licencia \href{https://www.gnu.org/licenses/gpl.html}{\textbf{GPL}}
-	\footnote{De hecho, creo que incluso utilizan la misma versión de dicha licencia.}.
+		\item ¿Qué gestores utiliza openSUSE?\footnote{Pista: \url{http://es.opensuse.org/Gestión_de_paquetes}}
+		
+		Como podemos ver en \cite{oS_packman}, de forma nativa openSUSE utiliza dos gestores de paquetes:
+		
+		\begin{itemize}
+			\item \textbf{YaST}\cite{oS_YaST}(\textit{Yet another Setup Tool}) para la gestión de manera
+			gráfica.
+			\item \textbf{Zypper}\cite{oS_zypper} para la gestión por línea de comandos.
+		\end{itemize}
+		
+		De hecho, ambos servicios están colgados de forma abierta y permitiendo no sólo ver el código
+		que utilizan si no también proponer cómo corregir un bug encontrado, reportarlo o simplemente
+		crear nuestro propio gestor de paquetes basado en alguno de ellos\cite{oS_YaST_GitHub}
+		\cite{oS_zypper_GitHub}.
+		
+		Ambos se distribuyen bajo la licencia \href{https://www.gnu.org/licenses/gpl.html}{\textbf{GPL}}
+		\footnote{De hecho, creo que incluso utilizan la misma versión de dicha licencia.}.
 	
 	\section{Gestión de los cortafuegos(\textit{Firewalls})}
 	\section{Instalación del servicio de acceso remoto a la consola(\textit{Secure Shell})}
-	\item ¿Qué diferencia hay entre telnet y ssh?
+		\item ¿Qué diferencia hay entre telnet y ssh?
+		
+		\item ¿Para qué sirve la opción \textbf{-X}? Ejecute remotamente, es decir, desde la máquina
+		anfitriona (si tiene Linux) o desde la otra máquina virtual, el comando \textit{gedit} en una
+		sesión abierta con \textit{ssh}. ¿Qué ocurre?
+		
+		\item Muestre la secuencia de comandos y las modificaciones a los archivos correspondientes
+		para permitir acceder a la consola remota sin introducir la contraseña\footnote{Pista: ssh-keygen,
+		ssh-copy-id}.
 	
-	\item ¿Para qué sirve la opción \textbf{-X}? Ejecute remotamente, es decir, desde la máquina
-	anfitriona (si tiene Linux) o desde la otra máquina virtual, el comando \textit{gedit} en una sesión
-	abierta con \textit{ssh}. ¿Qué ocurre?
+		\item ¿Qué archivo es el que contiene la configuración de sshd? ¿Qué parámetro hay que modificar
+		para evitar que el usuario root acceda? Cambie el puerto por defecto y compruebe que puede
+		acceder.
 	
-	\item Muestre la secuencia de comandos y las modificaciones a los archivos correspondientes para
-	permitir acceder a la consola remota sin introducir la contraseña\footnote{Pista: ssh-keygen, ssh-copy-id}.
-
-	\item ¿Qué archivo es el que contiene la configuración de sshd? ¿Qué parámetro hay que modificar
-	para evitar que el usuario root acceda? Cambie el puerto por defecto y compruebe que puede acceder.
-
-	\item Indique si es necesario reiniciar el servicio. ¿Cómo se reinicia un servicio en Ubuntu?
-	¿Y en CentOS? Muestre la secuencia de comandos para hacerlo.
+		\item Indique si es necesario reiniciar el servicio. ¿Cómo se reinicia un servicio en Ubuntu?
+		¿Y en CentOS? Muestre la secuencia de comandos para hacerlo.
 	
 	\subsection{Utilidades: screen y terminator}
-	\item Instale y pruebe \textit{terminator}. Con \textit{screen}, pruebe su funcionamiento dejando
-	sesiones \textit{ssh} abiertas en el servidor y recuperándolas posteriomente.
+		\item Instale y pruebe \textit{terminator}. Con \textit{screen}, pruebe su funcionamiento
+		dejando sesiones \textit{ssh} abiertas en el servidor y recuperándolas posteriomente.
 	
 	\subsection{Un poco de seguridad: \textit{fail2ban}}
-	\item Instale el servicio y pruebe su funcionamiento.
+		\item Instale el servicio y pruebe su funcionamiento.
 	
 	\section{Administración remota de Windows}
 	\section{Instalación de un servidor web básico}
 	\subsection{Instalación de Apache + MySQL (o MariaDB) + PHP (o Python) en Linux(\textit{LAMP})}
-	\item Muestre los comandos que ha utilizado en Ubuntu Server y en CentOS (aunque en este último puede
-	utilizar la GUI; en tal caso, realice capturas de pantalla).
-	
-	% En Ubuntu, usaremos \textbf{lamp-server^} para instalar LAMP.
-	% En CentOS, usaremos \textbf{httpd} para instalar Apache, \textbf{mariadb} para Maria-DB, \textbf{php} y \textbf{php-mysql} para PHP y añadiremos Apache a la lista de ejecuciones durante el arranque con \textit{systemctl enable httpd.service}, ahora lo inicializamos con \textit{systemctl start httpd.service} y ejecutamos además \textit{sudo firewall-cmd --permanent --add-service http} y reiniciamos el servicio con \textit{systemcl restart firewalld.service} para que los cambios surtan efecto.
-	
-	\item Enumere otros servidores web y las páginas de sus proyectos (mínimo 3 sin considerar Apache,
-	IIS ni nginx).
-	
-	% lightspeed, cherokee, lighttp, tomcat, wildfly, glassfish, jonas.
-	% Citar mi trabajo del año pasado.
+		\item Muestre los comandos que ha utilizado en Ubuntu Server y en CentOS (aunque en este último
+		puede utilizar la GUI; en tal caso, realice capturas de pantalla).
+		
+		% En Ubuntu, usaremos \textbf{lamp-server^} para instalar LAMP.
+		% En CentOS, usaremos \textbf{httpd} para instalar Apache, \textbf{mariadb} para Maria-DB, \textbf{php} y \textbf{php-mysql} para PHP y añadiremos Apache a la lista de ejecuciones durante el arranque con \textit{systemctl enable httpd.service}, ahora lo inicializamos con \textit{systemctl start httpd.service} y ejecutamos además \textit{sudo firewall-cmd --permanent --add-service http} y reiniciamos el servicio con \textit{systemcl restart firewalld.service} para que los cambios surtan efecto.
+		
+		\item Enumere otros servidores web y las páginas de sus proyectos (mínimo 3 sin considerar
+		Apache, IIS ni nginx).
+		
+		% lightspeed, cherokee, lighttp, tomcat, wildfly, glassfish, jonas.
+		% Citar mi trabajo del año pasado.
 	
 	\subsection{Windows: IIS}
-	\item Compruebe que el servicio está funcionando accediendo a la MV a través de la anfitriona.
-	% Objetivo:
-	% FTP Windows con un fichero no vacío y descargarlo desde Ubuntu
-	% Poner las máquinas en Red Nat
-	% Asegurarse de que se ven (PING)
-	% Crear un usuario en Windows
-	% Crear un servidor FTP(permitiendo usuario anterior)
-	% Firewall puerto 21
-	% Activamos el ping accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> File and Printer Sharing...
-	% Activamos el puerto de entrada accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> New Rule -> Port -> 21 -> Permitir -> <Nombre>
-	% Reiniciamos el firewall en Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Services -> <Lo buscamos y reiniciamos>
-	% Creamos un usuario accediendo a Administrative Tools -> Server Management -> Configuration -> Local Users and Groups -> Users
-	% Administrative Tools -> Server Management -> Roles -> Web Server(IIS) -> Internet Information Services -> Add FTP Service y lo configuramos como queramos.
+		\item Compruebe que el servicio está funcionando accediendo a la MV a través de la anfitriona.
+		% Objetivo:
+		% FTP Windows con un fichero no vacío y descargarlo desde Ubuntu
+		% Poner las máquinas en Red Nat
+		% Asegurarse de que se ven (PING)
+		% Crear un usuario en Windows
+		% Crear un servidor FTP(permitiendo usuario anterior)
+		% Firewall puerto 21
+		% Activamos el ping accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> File and Printer Sharing...
+		% Activamos el puerto de entrada accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> New Rule -> Port -> 21 -> Permitir -> <Nombre>
+		% Reiniciamos el firewall en Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Services -> <Lo buscamos y reiniciamos>
+		% Creamos un usuario accediendo a Administrative Tools -> Server Management -> Configuration -> Local Users and Groups -> Users
+		% Administrative Tools -> Server Management -> Roles -> Web Server(IIS) -> Internet Information Services -> Add FTP Service y lo configuramos como queramos.
 	\subsection{Windows y otros servidores web}
 	\subsection{Java Servlets}
-	\item Realice la instalación de uno de estos dos \textit{web containers} y pruebe su ejecución.
-	% Instalamos Tomcat y JBoss, creo que eso ya sé XD
-	% sudo apt-get install tomcat7
+		\item Realice la instalación de uno de estos dos \textit{web containers} y pruebe su ejecución.
+		% Instalamos Tomcat y JBoss, creo que eso ya sé XD
+		% sudo apt-get install tomcat7
 	
 	\subsection{Otro tipo de Bases de datos}
-	\item Realice la instalación de MongoDB en alguna de sus máquinas virtuales. Cree una colección de
-	documentos y haga una consulta sobre ellos \footnote{\url{http://docs.mongodb.org/manual/installation/}}.
-	% sudo apt-get install mongodb para instalar la base de datos
-	% Trabajar con Mongo:
-	%	use <Nombre de la base de datos>
-	%	show dbs para mostrarla
-	%
-	%	db.<Nombre DB>.insert{
-	%		<Categoría no numérica>: "<valor>",
-	%		<Categoría numérica>: <valor>,
-	%	}
-	%
-	%	Buscar "how to query mongodb" en DuckDuckGo
-	%
+		\item Realice la instalación de MongoDB en alguna de sus máquinas virtuales. Cree una colección
+		de documentos y haga una consulta sobre ellos
+		\footnote{\url{http://docs.mongodb.org/manual/installation/}}.
+		% sudo apt-get install mongodb para instalar la base de datos
+		% Trabajar con Mongo:
+		%	use <Nombre de la base de datos>
+		%	show dbs para mostrarla
+		%
+		%	db.<Nombre DB>.insert{
+		%		<Categoría no numérica>: "<valor>",
+		%		<Categoría numérica>: <valor>,
+		%	}
+		%
+		%	Buscar "how to query mongodb" en DuckDuckGo
+		%
 	
 	\section{Manteniendo de los servicios actualizados}
-	\item Muestre un ejemplo de uso del comando \footnote{\url{http://fedoraproject.org/wiki/VMWare}}
+		\item Muestre un ejemplo de uso del comando \footnote{\url{http://fedoraproject.org/wiki/VMWare}}
 	
 	\section{Administración web}
-	\item Realice la instalación de esta aplicación y pruebe a modificar algún parámetro de algún
-	servicio. Muestre las capturas de pantalla pertinentes así como el proceso de instalación.
-	% Visitar http://www.webmin.com/deb.html y obedecer o forma alternativa:
-	% En /etc/apt/sources.list, escribimos deb http://download.webmin.com/download/repository sarge contrib
-	% En /etc/apt/sources.list, escribimos deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
-	% wget http://www.webmin.com/jcameron-key.asc
-	% apt-key add jcameron-key.asc
-	% apt-get update
-	% apt-get install -y webmin
-	
-	\item Instale \textit{phpMyAdmin}, indique cómo lo ha realizado y muestre algunas capturas de
-	pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
-	Indique cómo ha realizado el proceso y muestre capturas de pantalla.
+		\item Realice la instalación de esta aplicación y pruebe a modificar algún parámetro de algún
+		servicio. Muestre las capturas de pantalla pertinentes así como el proceso de instalación.
+		% Visitar http://www.webmin.com/deb.html y obedecer o forma alternativa:
+		% En /etc/apt/sources.list, escribimos deb http://download.webmin.com/download/repository sarge contrib
+		% En /etc/apt/sources.list, escribimos deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
+		% wget http://www.webmin.com/jcameron-key.asc
+		% apt-key add jcameron-key.asc
+		% apt-get update
+		% apt-get install -y webmin
+		
+		\item Instale \textit{phpMyAdmin}, indique cómo lo ha realizado y muestre algunas capturas de
+		pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
+		Indique cómo ha realizado el proceso y muestre capturas de pantalla.
 	
 	\subsection{Más administradores: Ispconfig, Directadmin, C-Panel, Parallels,\dots}
-	\item Visite al menos una de las webs de los software mencionados y pruebe las demos que ofrecen
-	realizando capturas de pantalla y comentando qué está realizando.
+		\item Visite al menos una de las webs de los software mencionados y pruebe las demos que
+		ofrecen realizando capturas de pantalla y comentando qué está realizando.
 	
 	\section{Automatización de tareas con scripts}
 	\subsection{Shells}
 	\subsubsection*{Comandos grep, find, awk y sed}
-	\item Ejecute los ejemplos de find, grep y escriba el script que haga uso de sed para cambiar la
-	configuración de ssh y reiniciar el servicio.
-	
-	% Visitar https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux
-	% Sugerencia:
-	% 	Entrada: sshd_config
-	% 	Buscar línea donde se especifica el puerto
-	% 	Sustituir el puerto por 103
-	% 	Reiniciar el servicio
-	
-	\item Muestre un ejemplo de uso para awk.
-	% Visitar http://linux-es.org/node/31
-	% Sugerencia:
-	% 	Entrada: sshd_config
-	% 	Buscar línea donde se especifica el puerto
-	% 	Sustituir el puerto por 103
-	% 	Si no aparece, indicarlo
-	% 	Reiniciar el servicio
+		\item Ejecute los ejemplos de find, grep y escriba el script que haga uso de sed para cambiar
+		la configuración de ssh y reiniciar el servicio.
+		
+		% Visitar https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux
+		% Sugerencia:
+		% 	Entrada: sshd_config
+		% 	Buscar línea donde se especifica el puerto
+		% 	Sustituir el puerto por 103
+		% 	Reiniciar el servicio
+		
+		\item Muestre un ejemplo de uso para awk.
+		% Visitar http://linux-es.org/node/31
+		% Sugerencia:
+		% 	Entrada: sshd_config
+		% 	Buscar línea donde se especifica el puerto
+		% 	Sustituir el puerto por 103
+		% 	Si no aparece, indicarlo
+		% 	Reiniciar el servicio
 	
 	\subsection{PHP}
 	\subsection{Python}
-	\item Escriba el script para cambiar el acceso a ssh usando PHP o Python.
+		\item Escriba el script para cambiar el acceso a ssh usando PHP o Python.
 	
 	\subsection{Windows PowerShell}
-	\item Abra una consola de \textit{Powershell} y pruebe a parar un programa en ejecución, realice
-	capturas de pantalla y comente lo que muestra. También puede realizar otra tarea de su elección.
-	% Help para ver comandos disponibles
-	% Tasklist para ver los programas en ejecución
-	% Taskkill para matar el proceso
+		\item Abra una consola de \textit{Powershell} y pruebe a parar un programa en ejecución,
+		realice capturas de pantalla y comente lo que muestra. También puede realizar otra tarea de
+		su elección.
+		% Help para ver comandos disponibles
+		% Tasklist para ver los programas en ejecución
+		% Taskkill para matar el proceso
 	
 	\subsection{Más automatización}
 	
