@@ -164,6 +164,15 @@
 		anfitriona (si tiene Linux) o desde la otra máquina virtual, el comando \textit{gedit} en una
 		sesión abierta con \textit{ssh}. ¿Qué ocurre?
 		
+		Como podemos ver en \cite{man_SSH}, este parámetro nos permite la ejecución de aplicaciones
+		que utilicen el entorno gráfico durante una sesión abierta de \textit{secure shell} como si
+		se estuviera ejecutando directamente sobre la máquina, esto es, todos los cambios se producen
+		en ella con la diferencia de que no es necesario tener un entorno gráfico instalado en la
+		misma pues se ejecuta sobre la máquina que tiene la sesión de \textit{secure shell} abierta.
+		
+		Si no fuese posible dicha conexión(pero sí la conexión \textit{ssh}), nos informa que no es
+		posible la ejecución de este parámetro pero establece la sesión de forma normal.
+		
 		\item Muestre la secuencia de comandos y las modificaciones a los archivos correspondientes
 		para permitir acceder a la consola remota sin introducir la contraseña\footnote{Pista: ssh-keygen,
 		ssh-copy-id}.
