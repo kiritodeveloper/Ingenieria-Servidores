@@ -351,8 +351,52 @@
 	\subsection{Windows y otros servidores web}
 	\subsection{Java Servlets}
 		\item Realice la instalación de uno de estos dos \textit{web containers} y pruebe su ejecución.
-		% Instalamos Tomcat y JBoss, creo que eso ya sé XD
-		% sudo apt-get install tomcat7
+		
+		De nuevo, utilizaremos el trabajo realizado en \cite{TWG}\footnote{Por ello, dejaré como
+		pruebas del funcionamiento de los servicios las que ya subí para dicho trabajo}:
+		
+		\begin{itemize}
+			\item Instalar Tomcat se puede realizar fácilmente basándonos en las indicaciones dadas
+			en \cite{TC_install}:
+			
+			\begin{itemize}
+				\item Nos descargamos de \cite{TC_download} el archivo .zip correspondiente y lo
+				descomprimimos donde queramos instalar Tomcat. La instalación acaba satisfactoriamente.
+				
+				\item Si queremos reubicar el puerto de la página http, Realizaremos los pasos indicados
+				en \cite{TC_StackOverFlow}.
+				
+				\item Y basta con inicializar el servicio ejecutando el script \textit{startup.sh}.
+			\end{itemize}
+			
+			\item Para instalar WildFly seguiremos las instrucciones detalladas en \cite{WF_install}:
+			
+			\begin{itemize}
+				\item Tras haber descargado el archivo adecuado de \cite{WF_download}, descomprimimos
+				el archivo en la carpeta deseada.
+				
+				\item Ahora, para inciar el servicio, bastaría con ejecutar el script
+				\textit{standalone.sh} o el script \textit{domain.sh}.
+				
+				\item La instalación se realiza de una manera correcta pero al intentar ejecutar el
+				servicio, se podrían producir una serie de errores que nos impiden dar comienzo al
+				servicio\footnote{Como se detalla en \cite{WF_install}, hay otro modo para inicializar
+				el servicio, ejecutando \textit{domain.sh} pero igualmente genera una serie de errores
+				similares a la ejecución de \textit{standalone.sh}}.
+				
+				\item En cuyo caso, la solución, podría pasar por utilizar el script proporcionado por
+				una página no oficial \cite{WF_solution}\footnote{a pesar de no ser oficial, como he
+				podido comprobar que su solución es eficaz, la incluyo como referencia} que, directamente
+				descarga un archivo comprimido; posteriormente, lo descomprime e instala en la
+				correspondiente carpeta \textit{/opt}; lo configura, modificando así las líneas del
+				archivo \textit{standalone.xml} que permite cambiar el puerto por el cual se ofrece el
+				servicio y añade el usuario $"$wildfly$"$ automáticamente y activa el servicio.
+				
+				\item Además, este script en las últimas líneas modificaba el puerto en el cual se da
+				el servicio, que puede resultar de utilidad si se va a disponer de varios servidores
+				instalados a la vez.
+			\end{itemize}
+		\end{itemize}
 	
 	\subsection{Otro tipo de Bases de datos}
 		\item Realice la instalación de MongoDB en alguna de sus máquinas virtuales. Cree una colección
