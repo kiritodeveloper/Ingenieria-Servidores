@@ -219,21 +219,21 @@
 		\end{figure}
 		
 		
-		\item En muchas ocasiones es necesario reiniciar un servicio para que tome los cambios
-		en su configuración. Indique los comandos que puede emplear en Ubuntu y CentOS para
-		hacerlo.
+		\item En muchas ocasiones es necesario reiniciar un servicio para que tome los cambios en su
+		configuración. Indique los comandos que puede emplear en Ubuntu y CentOS para hacerlo.
 		
-		Basándonos en \cite{cyberciti1} y \cite{cyberciti2}, podemos ver varias formas de
-		reiniciar un servicio.
+		Utilizando el comando \textit{apropos}\cite{man_apropos}, podemos encontrar que los gestores
+		por defecto para la gestión de servicios son \textit{service}\cite{man_service} en Ubuntu Server
+		y \textit{systemctl}\cite{man_systemctl} para CentOS, ambos con una sintaxis similar:
 		
-		Tomando como ejemplo el servicio SSH, en Fedora, CentOS o similares, se utilizaría
-		\textit{/etc/init.d/sshd restart} o \textit{service sshd restart}.
+		\begin{itemize}
+			\item \textit{sudo systemctl <acción> <servicio>}
+			\item \textit{sudo service <servicio> <acción>}
+		\end{itemize}
+		donde la acción puede ser \textit{start}, \textit{stop} o \textit{restart} entre otras.
 		
-		Mientras que en Debian, Ubuntu o similares, sería \textit{/etc/init.d/ssh restart}
-		o \textit{service sshd restart}.
-		
-		También se puede hacer utilizando \textit{sudo restart ssh}.
-		
+		Por supuesto, otra forma perfectamente válida es ejecutar directamente el script específico del
+		servicio, sin embargo, para ello hay que saber dónde está ubicado.
 		
 		\item ¿Qué archivo es el que contiene la configuración de sshd? ¿Qué parámetro hay que modificar
 		para evitar que el usuario root acceda? Cambie el puerto por defecto y compruebe que puede
