@@ -343,11 +343,71 @@
 		% Crear un usuario en Windows
 		% Crear un servidor FTP(permitiendo usuario anterior)
 		% Firewall puerto 21
-		% Activamos el ping accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> File and Printer Sharing...
-		% Activamos el puerto de entrada accediendo a Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Inbound Rules -> New Rule -> Port -> 21 -> Permitir -> <Nombre>
-		% Reiniciamos el firewall en Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Services -> <Lo buscamos y reiniciamos>
+% Reiniciamos el firewall en Administrative Tools -> Server Management -> Configuration -> Windows Firewal... -> Services -> <Lo buscamos y reiniciamos>
 		% Creamos un usuario accediendo a Administrative Tools -> Server Management -> Configuration -> Local Users and Groups -> Users
 		% Administrative Tools -> Server Management -> Roles -> Web Server(IIS) -> Internet Information Services -> Add FTP Service y lo configuramos como queramos.
+		
+		Para lograr conectar la máquina anfitriona con la máquina virtual, lo primero que tendremos que
+		hacer es asegurarnos que se ven, pero por defecto, Windows Server no permite hacerle ping,
+		tenemos que ajustarlo modificando la regla mostrada en la figura:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_15a.jpg}
+			\caption{Activando señal ping.}
+			\label{fig:ping}
+		\end{figure}
+		
+		Para la transferencia de un archivo por ftp, necesitamos abrir un puerto para dicho fin,
+		utilizaremos el puerto 21 para lo cuál tendremos que modificar en:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_15b.jpg}
+			\caption{Abriendo puerto ftp.}
+			\label{fig:ftp}
+		\end{figure}
+		
+		Tras esto, necesitamos reinciar el servicio de cortafuegos en la subsección \textit{Services}.
+		
+		Ahora, crearemos un usuario a través del cuál realizaremos la transferencia:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_15c.jpg}
+			\caption{Creación del nuevo usuario.}
+			\label{fig:user}
+		\end{figure}
+		
+		Y también necesitamos un servidor FTP:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_15d.jpg}
+			\caption{Configuración del servidor.}
+			\label{fig:server}
+		\end{figure}
+		
+		Finalmente, creamos un archivo:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_15e.jpg}
+			\caption{Archivo a enviar.}
+			\label{fig:send}
+		\end{figure}
+		
+		Y lo transferimos:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_15f.jpg}
+			\caption{Archivo transferido.}
+			\label{fig:received}
+		\end{figure}
+		
+		
+		
 	\subsection{Windows y otros servidores web}
 	\subsection{Java Servlets}
 		\item Realice la instalación de uno de estos dos \textit{web containers} y pruebe su ejecución.
@@ -523,6 +583,8 @@
 		\item Instale \textit{phpMyAdmin}, indique cómo lo ha realizado y muestre algunas capturas de
 		pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
 		Indique cómo ha realizado el proceso y muestre capturas de pantalla.
+		
+		
 	
 	\subsection{Más administradores: Ispconfig, Directadmin, C-Panel, Parallels,\dots}
 		\item Visite al menos una de las webs de los software mencionados y pruebe las demos que
