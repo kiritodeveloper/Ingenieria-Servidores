@@ -456,14 +456,70 @@
 	\section{Administración web}
 		\item Realice la instalación de esta aplicación y pruebe a modificar algún parámetro de algún
 		servicio. Muestre las capturas de pantalla pertinentes así como el proceso de instalación.
-		% Visitar http://www.webmin.com/deb.html y obedecer o forma alternativa:
-		% En /etc/apt/sources.list, escribimos deb http://download.webmin.com/download/repository sarge contrib
-		% En /etc/apt/sources.list, escribimos deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
-		% wget http://www.webmin.com/jcameron-key.asc
-		% apt-key add jcameron-key.asc
-		% apt-get update
-		% apt-get install -y webmin
 		
+		Tras instalar el servicio con \textit{apt-get}\footnote{He buscado la forma de hacerlo usando
+		este comando porque con linux prefiero utilizar los gestores si es posible frente a bajarme el
+		comprimido e instalarlo manualmente.} como se indica en \cite{webmin}, aparece un mensaje
+		indicándonos que la instalación está completa y que podemos registrarnos en un URL concreta,
+		en mi caso \url{https://oxcar103-Lenovo-G580:10000/}, con cualquier usuario que pueda utilizar
+		el comando \textit{sudo} con la contraseña habitual para ejecutar \textit{webmin}\footnote{Lo
+		describo porque olvidé tomar captura}.
+		
+		Cuando entramos a dicha URL, podemos ver una serie de características de nuesto dispositivo y
+		de los servidores que tenemos instalados entre otras muchas cosas.
+		
+		En el lateral izquierdo, seleccionamos \textit{Servers} $\rightarrow$ \textit{MySQL Database
+		Server} y este es el estado inicial:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_19a.jpg}
+			\caption{Base de datos vacía.}
+			\label{fig:initial}
+		\end{figure}
+		
+		Ahora, pulsamos sobre \textit{Create a new database}, rellenamos los campos, como podemos ver:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_19b.jpg}
+			\caption{Creamos una nueva tabla.}
+			\label{fig:new}
+		\end{figure}
+		
+		Y le damos a aceptar.
+		
+		Ahora, pinchamos sobre nuestra nueva base de datos y la única tabla que de momento tiene y
+		éste es el resultado:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_19c.jpg}
+			\caption{Podemos ver su estructura básica.}
+			\label{fig:created}
+		\end{figure}
+		
+		Pinchamos sobre \textbf{View Data} para ver lo que contiene, como no contiene nada, clickeamos
+		sobre \textbf{Add row} y añadimos algunos datos:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_19d.jpg}
+			\caption{Aquí podemos ver los datos introducimos.}
+			\label{fig:data}
+		\end{figure}
+		
+		Ahora, desde la terminal, comprobamos que se creó la tabla\footnote{Los caracteres extraños
+		es porque he utilizado tíldes y caracteres rusos y japoneses que no están en \textbf{utf8}.}:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_19e.jpg}
+			\caption{Consulta de prueba.}
+			\label{fig:terminal}
+		\end{figure}
+		
+	
 		\item Instale \textit{phpMyAdmin}, indique cómo lo ha realizado y muestre algunas capturas de
 		pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
 		Indique cómo ha realizado el proceso y muestre capturas de pantalla.
