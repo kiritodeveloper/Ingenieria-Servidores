@@ -222,6 +222,42 @@
 		para evitar que el usuario root acceda? Cambie el puerto por defecto y compruebe que puede
 		acceder.
 		
+		El archivo de configuración que buscábamos es \textit{sshd\_config}\cite{man_sshd_config}, en
+		el cuál podremos gestionar de forma más sencilla cada uno de los parámetros de dicho
+		\textit{daemon}
+		
+		Primero, comprobamos que nos podemos conectar:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_9a.jpg}
+			\caption{Entramos a \textit{ssh} por el puerto por defecto.}
+			\label{fig:before}	
+		\end{figure}
+		
+		Ahora, cambiamos los parámetros que consideremos oportunos con un editor, por ejemplo,
+		\textit{nano}\cite{man_nano} en el cuál sólo cambiaremos el puerto por defecto esta vez:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_9b.jpg}
+			\caption{Archivo de configuración modificado.}
+			\label{fig:edit}	
+		\end{figure}
+		
+		Tras esto, es necesario reiniciar el servicio.
+		
+		Finalmente, vemos que al intentar entrar por \textit{ssh} al puerto por defecto, nos da un
+		error, mientras que si intentamos entrar por el nuevo puerto, se nos permite la entrada tras
+		escribir correctamente la contraseña:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_9c.jpg}
+			\caption{Comprobación de que surtió efecto el cambio.}
+			\label{fig:after}	
+		\end{figure}
+		
 		\item Indique si es necesario reiniciar el servicio. ¿Cómo se reinicia un servicio en Ubuntu?
 		¿Y en CentOS? Muestre la secuencia de comandos para hacerlo.
 		
