@@ -417,6 +417,41 @@
 	
 	\section{Manteniendo de los servicios actualizados}
 		\item Muestre un ejemplo de uso del comando \footnote{\url{http://fedoraproject.org/wiki/VMWare}}
+		
+		Podemos seguir el ejemplo de la pista del ejemplo o podemos crear nuestro propio ejemplo:
+		
+		\begin{itemize}
+			\item Creamos dos ficheros de texto con algún contenido (sin importar demasiado, pues la
+			finalidad del ejercicio es la creación de archivos \textit{.patch} y su aplicación).
+			
+			\item Una vez creados, mostramos su contenido para que visualmente se pueda hacer la
+			comparación.
+			
+			\item Tras esto, creamos el archivo \textit{.patch} con el comando \textit{diff}
+			\footnote{Este comando, tiene parámetros muy interesantes como:
+				\begin{itemize}
+					\item \textit{-b} para ignorar los espacios en blanco que no suelen ser demasiado
+					importantes a la hora de compilar el programa aunque sí a la hora de visualizarlo.
+					\item \textit{-N} que en caso de no existir un archivo, lo trata como un archivo vacío.
+					\item \textit{-{}-from-file/-{}-to-file} para comparar todos con el archivo(o directorio) % % Para producir -- en lugar de una línea, escribo -{}-
+					indicado.
+					\item \textit{-r} para comparar recursivamente con los subdirectorios(en caso de que se
+					pase como parámetro un directorio).
+				\end{itemize}
+			}, para más información, se puede visitar \cite{man_diff}.
+			
+			\item Ahora, basta usar el comando \textit{patch} \cite{man_patch} junto con el archivo a
+			modificar y el archivo \textit{.patch} para que se modifique.
+			
+			\item Todo esto, queda recogido en la siguiente captura:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=15cm]{Ejercicio_18.jpg}
+				\caption{Ejemplo de funcionamiento con patch.}
+				\label{fig:patch}
+			\end{figure}
+		\end{itemize}
 	
 	\section{Administración web}
 		\item Realice la instalación de esta aplicación y pruebe a modificar algún parámetro de algún
