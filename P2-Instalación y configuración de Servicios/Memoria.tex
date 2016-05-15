@@ -646,12 +646,34 @@
 		\item Ejecute los ejemplos de find, grep y escriba el script que haga uso de sed para cambiar
 		la configuración de ssh y reiniciar el servicio.
 		
-		% Visitar https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux
-		% Sugerencia:
-		% 	Entrada: sshd_config
-		% 	Buscar línea donde se especifica el puerto
-		% 	Sustituir el puerto por 103
-		% 	Reiniciar el servicio
+		No entiendo demasiado bien a qué se refiere con \textit{$"$Ejecute los ejemplos de find, grep
+		\dots$"$} pues el resultado en los mismos me daría vacío al no disponer de los archivos
+		especificados. En cambio, he ejecutado un par de ejemplo de ambos por mi cuenta\cite{man_find}
+		\cite{man_grep}:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_22a.jpg}
+			\caption{Prueba de \textit{find} y \textit{grep}.}
+			\label{fig:examples}
+		\end{figure}
+		
+		
+		Para el script de \textit{sed}\cite{man_sed}, quizás lo más complicado sea comprender la
+		sintaxis del mismo pero tras eso, basta con echarle un vistazo a \cite{man_sshd_config}\footnote{
+		También se puede abrir el archivo directamente y mirar en él} para elegir qué característica
+		queremos modificar.
+		
+		En mi caso, he optado por modificar el puerto, que es relativamente sencillo pero como puede
+		aparecer la línea comentada, también me he asegurado de descomentarla, así como reiniciar
+		el servidor \textit{ssh}:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_22b.jpg}
+			\caption{Contenido del script.}
+			\label{fig:script}
+		\end{figure}
 		
 		\item Muestre un ejemplo de uso para awk.
 		% Visitar http://linux-es.org/node/31
