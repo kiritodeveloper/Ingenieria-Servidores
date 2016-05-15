@@ -27,6 +27,7 @@
 
 \usepackage{amsmath,amsfonts,amsthm} % Math packages
 \usepackage{graphics,graphicx, float, url} %para incluir imágenes y colocarlas
+\usepackage{ulem}
 
 \usepackage{fancyhdr} % Custom headers and footers
 \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
@@ -699,6 +700,47 @@
 		% Help para ver comandos disponibles
 		% Tasklist para ver los programas en ejecución
 		% Taskkill para matar el proceso
+		
+		Para este experimento, utilizaremos a nuestro $"$querido$"$ \textit{Internet Explorer}:
+		
+		\begin{itemize}
+			\item Primero, ejecutamos \textit{HELP} en la \textit{Poweshell} para ver los comandos
+			usuales de los que disponemos.
+			\textit Vemos que los elementos necesarios para nuestra prueba son \textit{TASKLIST} para
+			ver los programas en ejecución y \textit{TASKKILL} para pararlo\footnote{Si necesitásemos
+			más información acerca de los comandos, ejecutamos \textit{HELP} <comando>.}.
+			\item Ejecutamos \textit{TASKLIST} para ver los procesos actualmente en el sistema:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=15cm]{Ejercicio_25a.jpg}
+				\caption{Procesos iniciales.}
+				\label{fig:list}
+			\end{figure}
+			
+			\item Ejecutamos nuestro proceso \sout{víctima} de prueba: \textit{Internet Explorer}
+			
+			Y vemos, de nuevo, la lista de procesos:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=15cm]{Ejercicio_25b.jpg}
+				\caption{Tras lanzar el proceso \textit{Internet Explorer}.}
+				\label{fig:born}
+			\end{figure}
+			
+			\item Finalmente, \sout{matamos} paramos a \textit{Internet Explorer}.
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=15cm]{Ejercicio_25c.jpg}
+				\caption{Tras \sout{matar} parar el proceso \textit{Internet Explorer}.}
+				\label{fig:die}
+			\end{figure}
+			
+			
+			
+		\end{itemize}
 	
 	\subsection{Más automatización}
 	
