@@ -585,6 +585,32 @@
 		pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
 		Indique cómo ha realizado el proceso y muestre capturas de pantalla.
 		
+		Para instalarlo, es tan sencillo como \textit{apt-get\footnote{Esto se debe a que he usado
+		Ubuntu Server pero de haber usado CentOS, se trabajaría de igual manera pero usando
+		\textit{yum} en su lugar.} install phpMyAdmin}. Durante la instalación, nos pregunta qué
+		servicios queremos configurar automáticamente tras la instalación, por lo que marcaremos los
+		que queramos, en nuestro caso se marcará el de Apache como mínimo\footnote{No me dí cuenta
+		de tomar captura de pantalla}, así como si queremos configurar la base de datos:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_20a.jpg}
+			\caption{Consulta durante la instalación.}
+			\label{fig:setup}
+		\end{figure}
+		
+		Para cambiar el límite por defecto, modificaremos el archivo \textit{php.ini} como podemos ver
+		en \cite{man_php} y buscaremos la línea que modifica la variable \textit{post\_max\_size}
+		dándole el valor que necesitemos:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_20b.jpg}
+			\caption{Archivo de configuración php.ini.}
+			\label{fig:php}
+		\end{figure}
+		
+		Finalmente, reiniciamos el servicio.
 	
 	\subsection{Más administradores: Ispconfig, Directadmin, C-Panel, Parallels,\dots}
 		\item Visite al menos una de las webs de los software mencionados y pruebe las demos que
