@@ -281,7 +281,18 @@
 	
 	\subsection{Un poco de seguridad: \textit{fail2ban}}
 		\item Instale el servicio y pruebe su funcionamiento.
-	
+		
+		Para instalarlo, utilizaremos cualquiera de los gestores de paquetes que hemos visto
+		anteriormente.
+		
+		Posteriormente, accederemos a \cite{man_fail2ban}, donde podremos ver que podemos modificar
+		el comportamiento del servicio tanto a nivel de cliente como de servidor. Entre otros archivos
+		de configuración en \textit{jail.conf}\cite{man_jail.conf} podemos configurar las restricciones
+		que queremos adoptar frente a cada servicio que supervisa, dando por ejemplo a ssh un máximo
+		de 3 intentos antes de banear la ip y en el resto de servicios ponerlo a 5. Incluso podemos
+		definir reglas en la carpeta \textit{filter.d} restringiendo la hora de acceso a ciertos
+		servicios o baneando ciertas direcciones MAC.
+		
 	\section{Administración remota de Windows}
 	\section{Instalación de un servidor web básico}
 	\subsection{Instalación de Apache + MySQL (o MariaDB) + PHP (o Python) en Linux(\textit{LAMP})}
