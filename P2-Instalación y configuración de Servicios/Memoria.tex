@@ -117,6 +117,7 @@
 		\textbf{Para eliminar:} \textit{sudo apt-get remove $<$paquete$>$}, por ejemplo: \textit{sudo
 		apt-get remove bsd-games}.
 		
+		
 		\item Indique qué ha modificado para que apt para acceder a los servidores de paquetes a través
 		de proxy. ¿Cómo añadimos un nuevo repositorio?
 		
@@ -161,7 +162,8 @@
 		la solución del problema que tenía estos protocolos, que era que no ofrecían confidencialidad
 		en redes poco seguras como las redes públicas y podían ser atacados por terceras personas
 		conectadas a dicha red. SSH para solucionarlo, encripta los datos.
-	
+		
+		
 		\item ¿Para qué sirve la opción \textbf{-X}? Ejecute remotamente, es decir, desde la máquina
 		anfitriona (si tiene Linux) o desde la otra máquina virtual, el comando \textit{gedit} en una
 		sesión abierta con \textit{ssh}. ¿Qué ocurre?
@@ -174,6 +176,7 @@
 		
 		Si no fuese posible dicha conexión(pero sí la conexión \textit{ssh}), nos informa que no es
 		posible la ejecución de este parámetro pero establece la sesión de forma normal.
+		
 		
 		\item Muestre la secuencia de comandos y las modificaciones a los archivos correspondientes
 		para permitir acceder a la consola remota sin introducir la contraseña\footnote{Pista: ssh-keygen,
@@ -220,6 +223,7 @@
 			\label{fig:test_2}	
 		\end{figure}
 		
+		
 		\item ¿Qué archivo es el que contiene la configuración de sshd? ¿Qué parámetro hay que modificar
 		para evitar que el usuario root acceda? Cambie el puerto por defecto y compruebe que puede
 		acceder.
@@ -260,6 +264,7 @@
 			\label{fig:after}	
 		\end{figure}
 		
+		
 		\item Indique si es necesario reiniciar el servicio. ¿Cómo se reinicia un servicio en Ubuntu?
 		¿Y en CentOS? Muestre la secuencia de comandos para hacerlo.
 		
@@ -276,7 +281,7 @@
 		Por supuesto, otra forma perfectamente válida es ejecutar directamente el script específico del
 		servicio, sin embargo, para ello hay que saber dónde está ubicado.
 		
-	
+		
 	\subsection{Utilidades: screen y terminator}
 		\item \textbf{Opcional:} Instale y pruebe \textit{terminator}. Con \textit{screen}, pruebe
 		su funcionamiento dejando sesiones \textit{ssh} abiertas en el servidor y recuperándolas
@@ -321,6 +326,7 @@
 		cambios de configuración que se produjeron durante la instalación de los mismo surte efecto
 		\footnote{Sería conveniente incluir el servicio de Apache para que sea capaz de atravesar el
 		cortafuegos al tratarse de un servicio web}.
+		
 		
 		\item Enumere otros servidores web y las páginas de sus proyectos (mínimo 3 sin considerar
 		Apache, IIS ni nginx).
@@ -409,9 +415,7 @@
 			\caption{Archivo transferido.}
 			\label{fig:received}
 		\end{figure}
-		
-		
-		
+	
 	\subsection{Windows y otros servidores web}
 	\subsection{Java Servlets}
 		\item \textbf{Opcional:} Realice la instalación de uno de estos dos \textit{web containers} y
@@ -572,7 +576,7 @@
 			\label{fig:terminal}
 		\end{figure}
 		
-	
+		
 		\item Instale \textit{phpMyAdmin}, indique cómo lo ha realizado y muestre algunas capturas de
 		pantalla. Configure PHP para poder importar BD's mayores de \textbf{8MiB} (límite por defecto).
 		Indique cómo ha realizado el proceso y muestre capturas de pantalla.
@@ -650,7 +654,6 @@
 			\label{fig:examples}
 		\end{figure}
 		
-		
 		Para el script de \textit{sed}\cite{man_sed}, quizás lo más complicado sea comprender la
 		sintaxis del mismo pero tras eso, basta con echarle un vistazo a \cite{man_sshd_config}\footnote{
 		También se puede abrir el archivo directamente y mirar en él} para elegir qué característica
@@ -667,6 +670,7 @@
 			\label{fig:script}
 		\end{figure}
 		
+		
 		\item \textbf{Opcional:} Muestre un ejemplo de uso para awk.
 		
 		Análogamente a \textit{sed}, he transformado el script anterior en un ejecutable de
@@ -679,7 +683,6 @@
 			\label{fig:awk}
 		\end{figure}
 		
-	
 	\subsection{PHP}
 	\subsection{Python}
 		\item Escriba el script para cambiar el acceso a ssh usando PHP o Python.
@@ -726,9 +729,8 @@
 				\label{fig:die}
 			\end{figure}
 		\end{itemize}
-	
+		
 	\subsection{Más automatización}
-	
 \end{enumerate}
 
 \newpage
