@@ -77,13 +77,13 @@
 	\section{Monitorización de Sistemas Linux}
 	\subsection{Conociendo el subsistema de archivos}
 		\item 
-		\begin{itemize}
+		\begin{enumerate}
 			\item ¿Qué archivo le permite ver qué programas se han instalado con el gestor de
 			paquetes?
 			
 			\item ¿Qué significan las terminaciones .1.gz o .2.gz de los archivos en ese
 			directorio?
-		\end{itemize}
+		\end{enumerate}
 		
 	\subsubsection{Volviendo con el RAID1}
 		\item \textbf{Opcional:} Indique qué comandos ha utilizado para realizarlo así como capturas
@@ -100,6 +100,84 @@
 		qué observa en la información mostrada.
 		
 	\subsection{Monitor General \textit{gnome-system-monitor}}
+	\section{Monitorizando Windows: \textit{perfmon}}
+		\item Ejecute el monitor de $"$System Performance$"$ y muestre el resultado. Incluya capturas
+		de pantalla comentando la información que aparece.
+		
+		\item Cree un recopilador de datos definido por el usuario (modo avanzado) que incluya tanto
+		el contador de rendimiento como los datos de seguimiento:
+		\begin{itemize}
+			\item Todos los referentes al procesador, al proceso y al servicio web.
+			\item Intervalo de muestra 15 segundos
+			\item Almacene el resultado en el directorio Escritorio$\backslash$logs
+		\end{itemize}
+		Incluya las capturas de pantalla de cada paso.
+		
+	\section{Monitorizando el hardware}
+		\item instale alguno de los monitores comentados arriba en su máquina y pruebe a ejecutarlos
+		(tenga en cuenta que si lo hace en la máquina virtual, los resultados pueden no ser
+		realistas). Alternativamente, busque otros monitores para hardware comerciales o de código
+		abierto para Windows y Linux.
+		
+	\section{Otros monitores del sistema}
+	\subsection{Munin}
+		\item Visite la web del proyecto y acceda a la demo que proporcionan
+		(\url{http://demo.munin-monitoring.org/}) donde se muestra cómo monitorizan un servidor.
+		Monitorice varios parámetros y haga capturas de pantalla de lo que está mostrando comentando
+		qué observa.
+	\subsection{Nagios}
+		\item \textbf{Opcional:} Instale Nagios en su sistema (el que prefiera) documentando el
+		proceso y muestre el resultado de la monitorización de su sistema comentando qué aparece.
+		
+	\subsection{Ganglia}
+		\item Haga lo mismo que con Munin.
+		
+	\subsection{Zabbix}
+		\item \textbf{Opcional:} Prueba a instalar este monitor en alguno de sus tres sistemas.
+		Realice capturas de pantalla del proceso de instalación y comente capturas de pantalla
+		del programa en ejecución.
+		
+	\subsection{Cacti}
+		\item \textbf{Opcional:} Pruebe a instalar este monitor en alguno de sus tres sistemas.
+		Realice capturas de pantalla del proceso de instalación y comente capturas de pantalla
+		del programa en ejecución.
+		
+	\subsection{Awstat}
+		\item \textbf{Opcional:} Instale el monitor y muestre y comente algunas capturas de pantalla.
+		
+	\subsection{Monitorizando un servicio (o ejecución de un programa)}
+		\item Escriba un breve resumen sobre alguno de los artículos donde se muestra el uso de
+		\textit{strace}, o busque otro programa similar y coméntelo.
+		
+	\section{Profiling}
+	\subsection{Ejecución de programas}
+	\subsubsection{\textit{Gproof} y \textit{valgrind}}
+		\item \textbf{Opcional:} Desarrolle una página en C o C++ y analice su comportamiento usando
+		\textit{valgrind}. Visite \url{http://www.cs.tut.fi/~jkorpela/forms/cgic.html} para ver un
+		ejemplo sencillo de una página web generada por un programa escrito en C.
+		
+	\subsubsection{PHP}
+		\item \textbf{Opcional:} Desarrolle un script en PHP y analice su ejecución con alguno (o
+		los dos) \textit{profilers}.
+		
+	\subsubsection{Python}
+		\item \textbf{Opcional:} Escriba un script en python y analice su comportamiento usando el
+		\textit{profiler} presentado.
+		
+	\subsubsection{PowerShell}
+		\item \textbf{Opcional:} Escriba un script en PowerShell y analice su comportamiento
+		usando el \textit{profiler} presentado.
+		
+	\subsection{Bases de Datos}
+	\subsubsection{MySQL}
+		\item Acceda a la consola mysql (o a través de phpMyAdmin) y muestre el resultado de mostrar
+		el $"$profile$"$ de una consulta (la creación de la BD y la consulta la puede hacer libremente).
+		
+	\subsubsection{MongoDB}
+		\item \textbf{Opcional:} Al igual que ha realizado el $"$profiling$"$ con MySQL, realice lo
+		mismo con MongoDB y compare los resultados (use la misma información y la misma consulta, hay
+		traductores de consultas SQL a Mongo).
+		
 \end{enumerate}
 
 \newpage
