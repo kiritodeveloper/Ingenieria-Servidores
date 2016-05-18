@@ -74,8 +74,32 @@
 \listoffigures
 
 \begin{enumerate}
-	\section{}
-	\item 
+	\section{Monitorización de Sistemas Linux}
+	\subsection{Conociendo el subsistema de archivos}
+		\item 
+		\begin{itemize}
+			\item ¿Qué archivo le permite ver qué programas se han instalado con el gestor de
+			paquetes?
+			
+			\item ¿Qué significan las terminaciones .1.gz o .2.gz de los archivos en ese
+			directorio?
+		\end{itemize}
+		
+	\subsubsection{Volviendo con el RAID1}
+		\item \textbf{Opcional:} Indique qué comandos ha utilizado para realizarlo así como capturas
+		de pantalla del proceso de reconstrucción del RAID.
+		
+	\subsection{Programación de tareas con \textit{cron}}
+		\item ¿Qué archivo ha de modificar para programar una tarea? Escriba la línea necesaria para
+		ejecutar una vez al día una copia del directorio \verb|~|/codigo a \verb|~|/seguridad/
+		\$fecha donde \$fecha es la fecha actual (puede usar el comando \textit{date}).
+		
+	\subsection{Analizando qué ocurre en el \textit{kernel} con \textit{dmesg}}
+		\item Pruebe a ejecutar el comando, conectar un dispositivo USB y vuelva a ejecutar el
+		comando. Copie y pegue la salida del comando (considere usar \textit{dmesg | tail}). Comente
+		qué observa en la información mostrada.
+		
+	\subsection{Monitor General \textit{gnome-system-monitor}}
 \end{enumerate}
 
 \newpage
