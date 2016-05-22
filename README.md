@@ -38,6 +38,32 @@ Prácticas de la asignatura de Ingeniería de Servidores(IS)
 		- Windows PowerShell  
 		- Más automatización  
 
+- **P3-Monitorización de archivos**  
+	- *Monitorización de Sistemas Linux*  
+		- Conociendo el subsistema de archivos  
+		- Programación de tareas con cron  
+		- Analizando qué ocurre en el kernel con dmesg  
+		- Monitor General gnome-system-monitor  
+	- *Monitorizando Windows: perfmon*  
+	- *Monitorizando el hardware*  
+	- *Otros monitores del sistema*  
+		- Munin  
+		- Nagios  
+		- Ganglia  
+		- Zabbix  
+		- Cacti  
+		- Awstat  
+		- Monitorizando un servicio (o ejecución de un programa)  
+	- *Profiling*  
+		- Ejecución de programas  
+			1. Gproof y valgrind
+			2. PHP  
+			3. Python  
+			4. PowerShell  
+		- Bases de Datos  
+			1. MySQL  
+			2. MongoDB  
+
 Licencia
 -----------------------------------
 El proyecto en conjunto se distribuye bajo la licencia [GPL](https://github.com/oxcar103/Ingenieria-Servidores/blob/master/LICENSE)
