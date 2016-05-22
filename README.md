@@ -1,7 +1,7 @@
 Ingeniería Servidores  
-====
+=================================
 Prácticas de la asignatura de Ingeniería de Servidores(IS)
-----
+---------------------------------
 - **P1 - Instalación de SO y RAID**  
   - *Introducción*  
     - Concepto de Máquina Virtual y virtualización  
@@ -12,5 +12,7 @@ Prácticas de la asignatura de Ingeniería de Servidores(IS)
   - *Editores de texto*  
 
 Licencia
-----
-La licencia no se aplicará sobre el material aportado por el profesor.
+-----------------------------------
+El proyecto en conjunto se distribuye bajo la licencia [GPL](https://github.com/oxcar103/Ingenieria-Servidores/blob/master/LICENSE)
+
+Sin embargo, la licencia no se aplicará sobre el material aportado por el profesor.
