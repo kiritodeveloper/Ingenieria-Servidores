@@ -11,7 +11,7 @@ Prácticas de la asignatura de Ingeniería de Servidores(IS)
 		- Ajuste de parámetros de la Máquina Virtual  
 	- *Editores de texto*  
 
-- **P2**  
+- **P2 - Instalación y configuración de Servicios**  
 	- *Instalación de servicios y configuración*  
 		- yum  
 		- apt  
