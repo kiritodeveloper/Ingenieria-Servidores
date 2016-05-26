@@ -98,6 +98,26 @@
 			\end{itemize}
 			
 			\item ¿Qué significan las terminaciones .1.gz o .2.gz de los archivos en ese directorio?
+			
+			En el directorio \verb|/var/log| se almacenan archivos con datos del sistema y de algunos
+			programas y servicios. Por ejemplo, los datos de comienzo y cierre de sesión.\cite{dir_var}
+			
+			Para automatizar el proceso de creación y borrado de estos archivos, se hace uso de
+			\textit{logrotate}\cite{man_logrotate} ejecutándose diariamente con \textit{cron}. Este
+			comando, revisa los archivos log y, en función del archivo de configuración del servicio
+			asociado, lo borra(si excede el tiempo establecido\footnote{Puede ser que lo que determine
+			si un archivo de log debe ser borrado sea que hay muchas copias de log del servicio
+			asociado, en cuyo caso, se borra la más antigua.}) o crea uno nuevo(si el actual tiene más
+			tiempo del que está establecido\footnote{Puede ser que la condición para determinar si un
+			archivo de log debe dejar de escribirse en él y empezar a escribir en otro nuevo sea que
+			ha excedido cierto tamaño.}).
+			
+			Cada vez que se crea un nuevo archivo con \textit{logrotate}, su formato por defecto
+			es $<$service\_name$>$.$<$other\_values$>$.$<$version\_number$>$.gz\footnote{Cada vez que
+			se llama a \textit{logrotate}, se renombran los archivos, esto es, el más antiguo, será el
+			que mayor número de versión tenga. Además, el primer archivo, no tendrá el número de
+			versión.}, aunque este formato puede ser modificado en el correspondiente archivo de
+			configuración.
 		\end{enumerate}
 		
 	\subsubsection{Volviendo con el RAID1}
