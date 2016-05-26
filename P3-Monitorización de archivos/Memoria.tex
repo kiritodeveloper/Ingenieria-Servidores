@@ -27,7 +27,7 @@
 
 \usepackage{amsmath,amsfonts,amsthm} % Math packages
 \usepackage{graphics,graphicx, float, url} %para incluir imágenes y colocarlas
-\usepackage{ulem}
+% \usepackage{ulem}
 
 \usepackage{fancyhdr} % Custom headers and footers
 \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
@@ -78,11 +78,26 @@
 	\subsection{Conociendo el subsistema de archivos}
 		\item 
 		\begin{enumerate}
-			\item ¿Qué archivo le permite ver qué programas se han instalado con el gestor de
-			paquetes?
+			\item ¿Qué archivo le permite ver qué programas se han instalado con el gestor de paquetes?
 			
-			\item ¿Qué significan las terminaciones .1.gz o .2.gz de los archivos en ese
-			directorio?
+			La ubicación de estos archivos depende, como es lógico, del gestor de paquetes. Basándome
+			en la sección de ficheros de los respectivos manuales de dichos gestores(\textit{apt}
+			\cite{man_apt-get} en Ubuntu y \textit{yum}\cite{man_yum} en CentOS), los registros de los
+			paquetes instalados serían:
+			\begin{itemize}
+				\item \verb|/var/cache/apt/archives| para \textit{apt-get}
+				\item \verb|/var/cache/yum| para \textit{yum}.
+			\end{itemize}
+			
+			Inspeccionando el directorio \verb|/var/log|, también descubrí otros ficheros que guardan
+			registros sobre los paquetes instalados:
+			\begin{itemize}
+				\item En \textit{apt} se usa \verb|/var/log/apt/history.log| para los paquetes y
+				\verb|/var/log/apt/terms.log| para los comandos de configuración.
+				\item En \textit{yum}, todo  se almacena en \verb|/var/log/yum.log|
+			\end{itemize}
+			
+			\item ¿Qué significan las terminaciones .1.gz o .2.gz de los archivos en ese directorio?
 		\end{enumerate}
 		
 	\subsubsection{Volviendo con el RAID1}
