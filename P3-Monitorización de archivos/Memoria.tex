@@ -124,6 +124,39 @@
 		\item \textbf{Opcional:} Indique qué comandos ha utilizado para realizarlo así como capturas
 		de pantalla del proceso de reconstrucción del RAID.
 		
+		Para el fallo, usaremos el comando \verb|mdadm -–manage /dev/md0 –-fail /dev/sda1|
+		\cite{man_mdadm} para marcar el dispositivo como defectuoso:
+		
+		%\includegraphics[width=15cm]{Ejercicio_2a.jpg}
+		
+		Comprobamos con el monitor sugerido \verb|watch -c2 cat /proc/mdstat| que se ha logrado marcar
+		con éxito, podemos ver una $"$F$"$ que(gracias a \cite{wiki_mdstat}) sabemos que significa que
+		ese dispositivo está marcado con un fallo:
+		
+		%\includegraphics[width=15cm]{Ejercicio_2b.jpg}
+		
+		Ahora, con la orden \verb|mdadm –-manage /dev/md0 –-remove /dev/sda1| simulamos retirar el disco:
+		
+		%\includegraphics[width=15cm]{Ejercicio_2c.jpg}
+		
+		Y ésta sería la salida que se nos muestra con el monitor dado, como podemos ver, el dispositivo
+		ya no aparece:
+		
+		%\includegraphics[width=15cm]{Ejercicio_2d.jpg}
+		
+		Seguidamente, volvemos a añadirlo con el comando \verb|mdadm –-manage /dev/md0 –-add /dev/sda|:
+		
+		%\includegraphics[width=15cm]{Ejercicio_2e.jpg}
+		
+		Al utilizar el monitor, volvemos a ver el dispositivo que habíamos quitado y vemos que se está
+		reconstruyendo el RAID:
+		
+		%\includegraphics[width=15cm]{Ejercicio_2f.jpg}
+		
+		Finalmente, queda así:
+		
+		%\includegraphics[width=15cm]{Ejercicio_2g.jpg}
+		
 	\subsection{Programación de tareas con \textit{cron}}
 		\item ¿Qué archivo ha de modificar para programar una tarea? Escriba la línea necesaria para
 		ejecutar una vez al día una copia del directorio \verb|~|/codigo a \verb|~|/seguridad/
