@@ -127,35 +127,70 @@
 		Para el fallo, usaremos el comando \verb|mdadm -–manage /dev/md0 –-fail /dev/sda1|
 		\cite{man_mdadm} para marcar el dispositivo como defectuoso:
 		
-		%\includegraphics[width=15cm]{Ejercicio_2a.jpg}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2a.jpg}
+			\caption{Marcamos el fallo del dispositivo.}
+			\label{fig:mark}	
+		\end{figure}
 		
 		Comprobamos con el monitor sugerido \verb|watch -c2 cat /proc/mdstat| que se ha logrado marcar
 		con éxito, podemos ver una $"$F$"$ que(gracias a \cite{wiki_mdstat}) sabemos que significa que
 		ese dispositivo está marcado con un fallo:
 		
-		%\includegraphics[width=15cm]{Ejercicio_2b.jpg}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2b.jpg}
+			\caption{El disco marcado con fallo.}
+			\label{fig:m_status}	
+		\end{figure}
 		
 		Ahora, con la orden \verb|mdadm –-manage /dev/md0 –-remove /dev/sda1| simulamos retirar el disco:
 		
-		%\includegraphics[width=15cm]{Ejercicio_2c.jpg}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2c.jpg}
+			\caption{Extracción del dispositivo.}
+			\label{fig:delete}
+		\end{figure}
 		
 		Y ésta sería la salida que se nos muestra con el monitor dado, como podemos ver, el dispositivo
 		ya no aparece:
 		
-		%\includegraphics[width=15cm]{Ejercicio_2d.jpg}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2d.jpg}
+			\caption{Estado de la máquina tras extraer el disco.}
+			\label{fig:d_status}	
+		\end{figure}
 		
 		Seguidamente, volvemos a añadirlo con el comando \verb|mdadm –-manage /dev/md0 –-add /dev/sda|:
 		
-		%\includegraphics[width=15cm]{Ejercicio_2e.jpg}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2e.jpg}
+			\caption{Recuperación del RAID dañado.}
+			\label{fig:repair}	
+		\end{figure}
 		
 		Al utilizar el monitor, volvemos a ver el dispositivo que habíamos quitado y vemos que se está
 		reconstruyendo el RAID:
 		
-		%\includegraphics[width=15cm]{Ejercicio_2f.jpg}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2f.jpg}
+			\caption{Progreso de la reconstrucción del RAID.}
+			\label{fig:r_status}	
+		\end{figure}
 		
 		Finalmente, queda así:
 		
-		%\includegraphics[width=15cm]{Ejercicio_2g.jpg}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2g.jpg}
+			\caption{Estado final del RAID.}
+			\label{fig:f_status}	
+		\end{figure}
 		
 	\subsection{Programación de tareas con \textit{cron}}
 		\item ¿Qué archivo ha de modificar para programar una tarea? Escriba la línea necesaria para
