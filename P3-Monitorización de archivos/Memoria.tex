@@ -47,6 +47,9 @@
 
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
 
+%% Para incluir archivos en texto plano
+\usepackage{listings}
+
 %----------------------------------------------------------------------------------------
 %	TÍTULO Y DATOS DEL ALUMNO
 %----------------------------------------------------------------------------------------
@@ -196,6 +199,25 @@
 		\item ¿Qué archivo ha de modificar para programar una tarea? Escriba la línea necesaria para
 		ejecutar una vez al día una copia del directorio \verb|~|/codigo a \verb|~|/seguridad/
 		\$fecha donde \$fecha es la fecha actual (puede usar el comando \textit{date}).
+		
+		En principio, el demonio \textit{cron}\cite{man_cron} ejecuta los comandos siguiendo las
+		instrucciones dadas por el archivo \textit{crontab}\cite{man_crontab} y dispone además de una
+		serie de repositorios con el fin de almacenar scripts con una periodicidad particular:
+		\begin{itemize}
+			\item \verb|/etc/cron.d| para ejecuciones de cualquier periodicidad.
+			\item \verb|/etc/cron.hourly| para ejecuciones cada hora.
+			\item \verb|/etc/cron.dialy| para ejecuciones cada día.
+			\item \verb|/etc/cron.weekly| para ejecuciones cada semana.
+			\item \verb|/etc/cron.monthly| para ejecuciones cada mes.
+		\end{itemize}
+		
+		Para la tarea que nos piden realizar, creamos el siguiente script\footnote{He incluido el script
+		directamente y se tienen ciertos errores en la visualización del $\%$.}:
+		
+		\lstinputlisting{./script.sh}
+		
+		Y como queremos programar que la tarea se repita de forma diaria, la incluiremos en el directorio
+		\verb|/etc/cron.dialy/| anteriormente mencionado.
 		
 	\subsection{Analizando qué ocurre en el \textit{kernel} con \textit{dmesg}}
 		\item Pruebe a ejecutar el comando, conectar un dispositivo USB y vuelva a ejecutar el
