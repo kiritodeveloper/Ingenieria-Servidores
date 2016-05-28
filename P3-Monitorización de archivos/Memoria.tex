@@ -224,6 +224,35 @@
 		comando. Copie y pegue la salida del comando (considere usar \verb+dmesg | tail+). Comente
 		qué observa en la información mostrada.
 		
+		El comando \textit{dmesg}\cite{man_dmesg} nos muestra la información del \textit{kernel ring
+		buffer} por defecto aunque dispone de algunos otros parámetros para darle formato y/o color a
+		dicha salida o limpiar dicho buffer.
+		
+		Como resulta que tenía conectados tanto el móvil como el pendrive al portátil, he podido ver las
+		líneas que hacen mención a cuándo lo conecté por primera vez, cuándo los desconecté y cuándo los
+		he vuelto a conectar:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_4.jpg}
+			\caption{Ejecución del comando \textit{dmesg}.}
+			\label{fig:dmesg}	
+		\end{figure}
+		
+		\begin{itemize}
+			\item En rojo, las conexiones del móvil, nos muestra algunos datos del mismo como su número
+			de serie.
+			
+			\item En amarillo, las desconexiones del móvil\footnote{De hecho, la desconexión que aparece,
+			no es cosa mía, al parecer, el cable está un poco roto y se desconecta antes de que lo
+			desenchufe, ya que lo desenchufé junto con el pendrive.}.
+			
+			\item En azul, las conexiones del pendrive, también nos muestra el número de serie, y además,
+			se ve cómo se abre la carpeta cuando lo conectamos.
+			
+			\item En verde, las desconexiones del pendrive\footnote{Nótese, que no hay diferencia con
+			las del móvil.}.
+		\end{itemize}
 		
 	\subsection{Monitor General \textit{gnome-system-monitor}}
 	\section{Monitorizando Windows: \textit{perfmon}}
