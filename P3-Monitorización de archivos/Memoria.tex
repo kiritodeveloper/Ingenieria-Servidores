@@ -298,6 +298,31 @@
 		\item Acceda a la consola mysql (o a través de phpMyAdmin) y muestre el resultado de mostrar
 		el $"$profile$"$ de una consulta (la creación de la BD y la consulta la puede hacer libremente).
 		
+		Para testear el uso de dicho \textit{profile}, probaremos a realizar una consulta sobre una
+		consulta sin índices y posteriormente, le incorporaremos uno para ver si se produce una mejora
+		en la eficiencia de la misma\footnote{Aunque los índices suelen agilizar las búsquedas si están
+		hechos sobre los campos adecuados, en algunas ocasiones como el hecho de incorporarlos en una
+		tabla demasiado pequeña, un índice puede incluso empeorar el resultado. Sin embargo, en este
+		experimento no se ha dado dicho caso.}.
+		
+		Sobre la base de datos por defecto \textit{mysql}, he realizado la consulta:
+		\begin{verbatim}
+			select password from user where user.user in (select user from proxies\_priv where
+			with\_grant$>$0 \&\& host like '\%oxcar103\%');
+		\end{verbatim}
+		
+		Después, he creado un índice sobre la tabla \textit{proxies\_priv} para agilizar la consulta.
+		
+		Y podemos ver el resultado en la siguiente captura del proceso\footnote{He emborronado la salida
+		de la consulta porque no es de interés para la práctica y son contraseñas, aunque cifradas.}:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_19.jpg}
+			\caption{Experimento con el \textit{profile} de \textit{mysql}.}
+			\label{fig:profile}	
+		\end{figure}
+		
 	\subsubsection{MongoDB}
 		\item \textbf{Opcional:} Al igual que ha realizado el $"$profiling$"$ con MySQL, realice lo
 		mismo con MongoDB y compare los resultados (use la misma información y la misma consulta, hay
