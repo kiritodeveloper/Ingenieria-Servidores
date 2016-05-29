@@ -236,7 +236,7 @@
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_4.jpg}
 			\caption{Ejecución del comando \textit{dmesg}.}
-			\label{fig:dmesg}	
+			\label{fig:dmesg}
 		\end{figure}
 		
 		\begin{itemize}
@@ -258,6 +258,25 @@
 	\section{Monitorizando Windows: \textit{perfmon}}
 		\item Ejecute el monitor de $"$System Performance$"$ y muestre el resultado. Incluya capturas
 		de pantalla comentando la información que aparece.
+		
+		Al ejecutar dicho monitor, nos genera el siguiente informe\footnote{En la imagen, sólo aparece
+		una captura de pantalla de los resúmenes del informe ya que de intentar incluir todo el
+		contenido del informe, podría ocupar varias hojas completas.}:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_5.jpg}
+			\caption{Informe por defecto.}
+			\label{fig:SP_default}
+		\end{figure}
+		
+		En este informe, aparece la información actual del sistema en el intervalo de tiempo configurado
+		en el monitor. En el informe, aparece información muy detallada sobre el uso de CPU, utilización
+		de memoria principal y de almacenamiento masivo y conexión a red. Además, cada uno de estos
+		apartados se subdivide en otro conjunto de apartados.
+		
+		Por ejemplo, el de utilización de red se subdivide en Interfaz, IP, TCP y UDP, y el de CPU se
+		subdivide en Proceso, Servicio, Servicios y Sistema.
 		
 		\item Cree un recopilador de datos definido por el usuario (modo avanzado) que incluya tanto
 		el contador de rendimiento como los datos de seguimiento:
