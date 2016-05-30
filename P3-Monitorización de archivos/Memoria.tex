@@ -533,6 +533,46 @@
 		\item Escriba un breve resumen sobre alguno de los artículos donde se muestra el uso de
 		\textit{strace}, o busque otro programa similar y coméntelo.
 		
+		En \cite{strace1}, el autor nos informa sobre la utilidad del comando \textit{strace}, que
+		consiste en seguir las llamadas al sistema que realizan los programas pasados como parámetro,
+		así como los parámetros que utilizan y su valor, además de una justificación de por qué los
+		considera los más adecuados.
+		
+		Inicialmente analiza un programa \textit{de juguete} para enseñar las funciones básicas de la
+		ejecución de un programa que nos vamos a encontrar en casi todos los ejecutables que analicemos.
+		
+		Posteriormente, analiza superficialmente un programa de mayor envergadura haciendo hincapié en
+		ciertas líneas que considera interesante resaltar y explica el significado de dichas líneas.
+		
+		Además, plantea una sugerencia basada en su propia experiencia para facilitar el análisis en las
+		primeras tomas de contacto con el comando, que consistiría en comparar los resultados de un
+		programa que produce conflicto con otro similar que no lo produzca.
+		
+		Finalmente, y considero que quizás sea la mejor parte, nos incita a leer las páginas del manual,
+		a explorar y a divertirnos con nuestro trabajo.
+		
+		En \cite{strace2}, nos enseña a instalar el paquete y una ligera guía de uso del mismo. Analiza
+		además la ejecución de un archivo simple y nos enseña las pautas generales que podremos ver en
+		un programa básico.
+		
+		Igual que en el caso anterior, nos instruye ligeramente sobre qué parametros usar con una breve
+		justificación y explicación de la utilidad de los mismos.
+		
+		A modo práctico, nos cuenta una anécdota sobre cómo solventó un problema en las conexiones a
+		través de clientes usando \textit{strace}.
+		
+		En \cite{strace3}, nos presenta a \textit{strace} rompiendo con las etiquetas usualmente
+		utilizadas en él de \textit{debuggeador} y de \textit{herramienta de programador} para
+		definirlo como \textsf{Herramienta de Administrador de Sistemas para Monitorizar Llamadas de
+		Sistema y Señales}.
+		
+		Además, nos presenta las instrucciones que con más frecuencia veremos: \textit{read, write,
+		open, close, stat, fork, execute(execve), chmod, chown}. Y lo aplica sobre una ejecución simple
+		del comando \textit{cat}\cite{man_cat}.
+		
+		Posteriormente, ejecuta \textit{strace} sobre otra ejecución algo más compleja añadiéndole una
+		serie de parámetros que, como el resto de artículos, explica y justifica su inclusión.
+		
 	\section{Profiling}
 	\subsection{Ejecución de programas}
 	\subsubsection{\textit{Gproof} y \textit{valgrind}}
