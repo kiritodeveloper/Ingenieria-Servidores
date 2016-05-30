@@ -362,10 +362,28 @@
 		\end{figure}
 		
 	\section{Monitorizando el hardware}
-		\item instale alguno de los monitores comentados arriba en su máquina y pruebe a ejecutarlos
+		\item Instale alguno de los monitores comentados arriba en su máquina y pruebe a ejecutarlos
 		(tenga en cuenta que si lo hace en la máquina virtual, los resultados pueden no ser
 		realistas). Alternativamente, busque otros monitores para hardware comerciales o de código
 		abierto para Windows y Linux.
+		
+		En esta prueba, instalé tanto un sensor de próposito múltiple como el comando \textit{sensors}
+		\cite{man_sensors} que nos da información de los distintos sensores que tiene nuestra máquina
+		mediante la instalación del paquete \textit{lm-sensors} como un paquete más específico que mide
+		la temperatura llamado \textit{hddtemp}\cite{man_hddtemp} para el que es necesario instalar el
+		paquete del mismo nombre. Siendo ambos distribuido mediante licencia de software libre
+		\href{https://www.gnu.org/licenses/gpl.html}{\textbf{GPL}}.
+		
+		También, instalé \textit{fancontrol}\cite{man_fancontrol}\footnote{También distribuido con
+		licencia \href{https://www.gnu.org/licenses/gpl.html}{\textbf{GPL}}.} mediante el paquete del
+		mismo nombre para medir y editar el funcionamiento del ventilador, éste comando además,
+		requiere de la ejecución de \textit{pwmconfig}\cite{man_pwmconfig} previamente para su correcto
+		funcionamiento.
+		
+		Aunque no llegué a instalarlos, también investigué sobre el controlador \textit{Open Hardware
+		Monitor}\cite{OPM_official} para Windows de utilidad similar a \textit{sensors} que se
+		distribuye bajo la licencia \href{https://www.mozilla.org/en-US/MPL/2.0/}{\textbf{Mozilla Public
+		License 2.0}}.
 		
 	\section{Otros monitores del sistema}
 	\subsection{Munin}
