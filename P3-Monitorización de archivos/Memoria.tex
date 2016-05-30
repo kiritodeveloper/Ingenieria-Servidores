@@ -427,6 +427,45 @@
 	\subsection{Ganglia}
 		\item \textbf{Opcional:} Haga lo mismo que con Munin.
 		
+		Ganglia, al igual que Munin, es un sistema de monitorización muy eficiente, muy bien documento
+		\cite{ganglia_official}, aunque algo peor a mi criterio por lo que preferí instalar en mi
+		máquina Munin y éste simplemente observar algunas gráficas de ejemplo y comentarlas, también
+		está implementado parcialmente en Perl aunque dispone de componentes en distintos lenguajes de
+		código como podemos ver en su repositorio abierto\cite{ganglia_github} y se distribuye bajo la
+		licencia \href{http://www.freebsd.org/copyright/license.html}{\textbf{BSD}}.
+		
+		Originalmente, la página oficial dispone de una serie de demos\cite{ganglia_demo} que,
+		desgraciadamente, están caídas y reportadas\cite{ganglia_issue} desde hace algún tiempo al
+		equipo de desarrolladores.
+		
+		Por este motivo, usaremos los datos proporcionados por Wikimedia\cite{ganglia_WM}.
+		
+		Tomaremos por ejemplo las gráficas de escalado de imágenes.
+		
+		En la siguiente imagen, podemos observar que se nos muestra un resumen de la actividad en la
+		última hora de dicho servicio en el cuál, se utiliza en gran medida el acceso a memoria y a la
+		red mientras que se requieren poco uso de otros uso como el de la CPU:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_10a.jpg}
+			\caption{Monitorización de servicios en tono general para el escalado de imágenes.}
+			\label{fig:Ganglia_general}
+		\end{figure}
+		
+		En cada una de estas imágenes, podemos clickear y veremos un monitoreo más amplio teniendo
+		acceso a información del servicio en distintos periodos de tiempo.
+		
+		En la imagen siguiente, podemos ver el uso de memoria:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_10b.jpg}
+			\caption{Monitorización de memoria para el escalado de imágenes.}
+			\label{fig:Ganglia_memoria}
+		\end{figure}
+		
+		
 	\subsection{Zabbix}
 		\item \textbf{Opcional:} Prueba a instalar este monitor en alguno de sus tres sistemas.
 		Realice capturas de pantalla del proceso de instalación y comente capturas de pantalla
