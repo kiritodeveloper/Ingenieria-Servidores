@@ -374,11 +374,43 @@
 		paquete del mismo nombre. Siendo ambos distribuido mediante licencia de software libre
 		\href{https://www.gnu.org/licenses/gpl.html}{\textbf{GPL}}.
 		
+		En la imagen se pueden apreciar los sensores de los que se compone principalmente mi máquina
+		junto con las que se consideran temperaturas altas, críticas y de emergencia:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7a.jpg}
+			\caption{Ejecución de \textit{sensors}.}
+			\label{fig:sensors}
+		\end{figure}
+		
+		Para testear el funcionamiento de \textit{hddtemp} es necesario indicarle el dispositivo sobre
+		el que trabajará, para ver su funcionamiento sobre una variedad de dispositivos lo he lanzado
+		sobre todos los que tenía conectados, es decir, sobre los que colgaban de \verb|/dev|:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7b.jpg}
+			\caption{Ejecución de \textit{hddtemp}.}
+			\label{fig:hddtemp}
+		\end{figure}
+		
 		También, instalé \textit{fancontrol}\cite{man_fancontrol}\footnote{También distribuido con
 		licencia \href{https://www.gnu.org/licenses/gpl.html}{\textbf{GPL}}.} mediante el paquete del
 		mismo nombre para medir y editar el funcionamiento del ventilador, éste comando además,
 		requiere de la ejecución de \textit{pwmconfig}\cite{man_pwmconfig} previamente para su correcto
 		funcionamiento.
+		
+		En mi caso, no ha sido posible monitorizar el ventilador porque no tenía compatibilidad de
+		\textit{pwm-module}:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7c.jpg}
+			\caption{Seleccionamos qué tipo de datos incluirá.}
+			\label{fig:fancontrol}
+		\end{figure}
+		
 		
 		Aunque no llegué a instalarlos, también investigué sobre el controlador \textit{Open Hardware
 		Monitor}\cite{OPM_official} para Windows de utilidad similar a \textit{sensors} que se
