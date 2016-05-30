@@ -373,6 +373,53 @@
 		(\url{http://demo.munin-monitoring.org/}) donde se muestra cómo monitorizan un servidor.
 		Monitorice varios parámetros y haga capturas de pantalla de lo que está mostrando comentando
 		qué observa.
+		
+		Munin es un sistema de monitorización muy eficiente, muy bien documento\cite{munin_official},
+		implementado en Perl y se distribuye bajo la licencia \href{https://www.gnu.org/licenses/gpl.html}
+		{\textbf{GPL}}. Por ello, he preferido testearlo instalándolo directamente en mi dispositivo
+		que mediante una demo.
+		
+		Su instalación es bastante sencilla, basta con instalar mediante nuestro gestor los paquetes
+		\textit{munin} y \textit{munin-node}.
+		
+		A la hora de configurarlo, como ya he dicho antes, está muy bien documentado, desde la propia
+		página de Munin \cite{munin_official} que proporciona la información detallada de para qué es
+		cada línea de los archivos de configuración, así como algunas páginas enlazadas en la página
+		oficial como pueden ser \textit{DebianAdmin}\cite{munin_DA} o \textit{wiki.Archlinux.org}
+		\cite{munin_archwiki}, y para finalizar, algunas páginas de configuración básica paso a paso
+		como la que he usado\cite{munin_conf}.
+		
+		He utilizado una configuración básica ya que no me parecía provechoso entrar en otra
+		configuración más avanzada ya que nuestro servidor no tiene ninguna especialización.
+		
+		Tras configurarlo, se debe reinciar tanto el servidor apache mediante la ejecución de la línea
+		\textit{sudo service apache2 restart} como nuestro recién instalado servicio de munin usando
+		\textit{sudo service munin-node restart} para que los cambios surtan efecto.
+		
+		Ahora, visitaremos 127.0.0.1/munin para tener acceso al sistema de monitorización.
+		
+		Tras dejarlo actuar varios días, este es el resultado:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_8a.jpg}
+			\caption{Monitorización del uso de la memoria.}
+			\label{fig:Munin_Mem}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_8b.jpg}
+			\caption{Monitorización del uso de la CPU.}
+			\label{fig:Munin_CPU}
+		\end{figure}
+		
+		Como se puede ver, hay un comportamiento anómalo tanto en la gráfica del uso de memoria como de
+		la CPU, se debe a la ejecución de aplicación de otra práctica que tuve que realizar en esos días.
+		
+		Podemos ver cómo se dispara el porcentaje de \textit{\%iowait} en el caso de la CPU y de
+		\textit{apps} en el caso de la memoria.
+		
 	\subsection{Nagios}
 		\item \textbf{Opcional:} Instale Nagios en su sistema (el que prefiera) documentando el
 		proceso y muestre el resultado de la monitorización de su sistema comentando qué aparece.
