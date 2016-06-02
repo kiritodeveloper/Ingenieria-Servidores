@@ -5,7 +5,7 @@ Prácticas de la asignatura de Ingeniería de Servidores(IS)
 - **P1 - Instalación de SO y RAID**  
 	- *Introducción*  
 		- Concepto de Máquina Virtual y virtualización  
-	- *Instalación de Sistemas Operativos virtualizados*
+	- *Instalación de Sistemas Operativos virtualizados*  
 		- Linux: Particionamiento del Disco Duro virtual y creación de RAID1  
 		- Windows Server  
 		- Ajuste de parámetros de la Máquina Virtual  
@@ -56,7 +56,7 @@ Prácticas de la asignatura de Ingeniería de Servidores(IS)
 		- Monitorizando un servicio (o ejecución de un programa)  
 	- *Profiling*  
 		- Ejecución de programas  
-			1. Gproof y valgrind
+			1. Gproof y valgrind  
 			2. PHP  
 			3. Python  
 			4. PowerShell  
