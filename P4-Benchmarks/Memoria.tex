@@ -77,7 +77,54 @@
 \listoffigures
 
 \begin{enumerate}
-	\item		
+	\section{Benchmarks populares}
+	\subsection{Phoronix Suite}
+		\item Instale la aplicación. ¿Qué comando permite listar los benchmarks disponibles?
+		
+		\item \textbf{Opcional:} Seleccione, instale y ejecute uno, comente los resultados\footnote{No
+		es lo mismo un benchmark que una suite, instale un benchmark}.
+		
+	\subsection{Benchmarks y Test de Estrés para Webs}
+	\subsubsection{Apache Benchmarks}
+		\item De los parámetros que le podemos pasar al comando. ¿Qué significa \textit{-c 5}?
+		¿y \textit{-n 100}? Monitorice la ejecución de \textit{ab} contra alguna máquina (cualquiera),
+		¿cuántos procesos o hebras crea \textit{ab} en el cliente?
+		
+		\item Ejecute \textit{ab} contra las 3 máquinas virtuales (desde el SO anfitrión a las máquinas
+		virtuales de la red local en Ubuntu, CentOS y WS) una a una (arrancadas por separado) y muestre
+		y comente las estadísticas. ¿Cuál es la que proporciona mejores resultados? Fíjese en el número
+		de bytes transferidos, ¿es igual para cada máquina?
+		
+	\subsubsection{Gatling}
+		\item \textbf{Opcional:} ¿Qué es Scala? Instale Gatling y pruebe los escenarios por defecto.
+		
+	\subsubsection{Jmeter}
+		\item \textbf{Opcional:} Lea el artículo y elabore un breve resumen.
+		
+		\item Instale y siga el tutorial en \url{http://jmeter.apache.org/usermanual/build-web-test-plan.html}
+		realizando capturas de pantalla y comentándolas. En vez de usar la web de \textit{jmeter},
+		haga el experimento usando alguna de sus máquinas virtuales (Puede hacer una página sencilla,
+		usar las páginas de \textit{phpmyadmin}, instalar un \textit{CMS}, \dots).
+		
+	\subsection{Benchmarks para Windows}
+	\subsubsection{Sisoftware Sandra}
+	\subsubsection{AIDA64 (Antiguo Everest)}
+		\item \textbf{Opcional:} Seleccione un benchmark entre \textit{SisoftSandra} y \textit{Aida}.
+		Ejecútelo y muestre capturas de pantalla comentando los resultados.
+		
+	\subsection{Más Benchmarks\dots}
+		\item Programe un benchmark usando el lenguaje que desee. El benchmark debe incluir:
+		\begin{enumerate}
+			\item Objetivo del benchmark.
+			\item Métricas (unidades, variables, puntuaciones, \dots).
+			\item Instrucciones para su uso.
+			\item Ejemplo de uso analizando los resultados.
+		\end{enumerate}
+		Tenga en cuenta que puede comparar varios gestores de BD, lenguajes de programación web (tiempos
+		de ejecución, gestión de memoria, \dots), duración de la batería, servidor DNS, \dots,
+		Alternativamente, puede descargar alguno de algún repositorio en GitHub y modificarlo según sus
+		necesidades.
+		
 \end{enumerate}
 
 \newpage
