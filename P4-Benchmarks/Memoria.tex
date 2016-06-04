@@ -83,6 +83,10 @@
 	\subsection{Phoronix Suite}
 		\item Instale la aplicación. ¿Qué comando permite listar los benchmarks disponibles?
 		
+		\textit{Phoronix Test Suite} es una software multiplataforma de evaluación de rendimiento
+		desarrollado por \textit{Phoronix Media}\cite{phoronix-official} y distribuido mediante la 
+		licencia de software libre \href{https://www.gnu.org/licenses/gpl.html}{\textbf{GPL}}
+		
 		Instalaremos la aplicación mediante \textit{sudo apt-get install phoronix-test-suite}). Tras
 		esto, consultamos el manual \cite{man_phoronix} y vemos que podemos deplegar una lista completa
 		de los posibles benchmarks con el parámetro \textit{list-available-tests}, de entre los que
@@ -125,6 +129,8 @@
 		\item De los parámetros que le podemos pasar al comando. ¿Qué significa \textit{-c 5}?
 		¿y \textit{-n 100}? Monitorice la ejecución de \textit{ab} contra alguna máquina (cualquiera),
 		¿cuántos procesos o hebras crea \textit{ab} en el cliente?
+		
+		
 		
 		\item Ejecute \textit{ab} contra las 3 máquinas virtuales (desde el SO anfitrión a las máquinas
 		virtuales de la red local en Ubuntu, CentOS y WS) una a una (arrancadas por separado) y muestre
