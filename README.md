@@ -2,7 +2,7 @@ Ingeniería Servidores
 =================================
 Prácticas de la asignatura de Ingeniería de Servidores(IS)
 ---------------------------------
-=======
+
 - **P1 - Instalación de SO y RAID**  
 	- *Introducción*  
 		- Concepto de Máquina Virtual y virtualización  
