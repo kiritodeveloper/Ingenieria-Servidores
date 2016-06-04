@@ -91,6 +91,35 @@
 		\item \textbf{Opcional:} Seleccione, instale y ejecute uno, comente los resultados\footnote{No
 		es lo mismo un benchmark que una suite, instale un benchmark}.
 		
+		Como para Windows escogí un benchmark de memoria, ahora cogeré uno de otra cosa.
+		
+		De entre la lista disponible, me llamó mucho la atención uno de criptografía, \textit{gcrypt},
+		que pone a prueba el procesador.
+		
+		Para ejecutar un benchmark, hay que escribir \textit{phoronix-test-suite benchmark $<$nombre$>$}.
+		
+		Tras esto, se descarga los archivos necesario\footnote{Esto se debe a que tenerlos todos
+		descargados haría que el paquete fuese increíblemente pesado porque, de los benchmarks que
+		muestra el parámetro \textit{list-available-tests}, algunos de dichos tests son juegos para
+		probar la tarjeta gráfica, lo que puede suponer fácilmente 0.5 GB por juego\footnote{Nótese
+		además que hay otro comando disponible llamado \textit{list-available-suites} que permite ver
+		algunos bancos de pruebas, con lo cuál, el peso sería aún mayor.}.}, y empieza la ejecución
+		preguntando primero si se quiere guardar en algún lugar específico el resultado.
+		
+		Durante la ejecución, se realizan varias mediciones sobre los mismos archivos y se toma la media
+		junto con la desviación típica de los datos.
+		
+		Al finalizar, se sugiere mostrar los resultados en el navegador(y si quieres subirlos a la página
+		oficial), y se muestran en gráficas que indican si el valor es a maximizar o minimizar, así como
+		la variable que se está midiendo y un escueto resumen de lo que hace cada programa:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_2.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phoronix}	
+		\end{figure}
+		
 	\subsection{Benchmarks y Test de Estrés para Webs}
 	\subsubsection{Apache Benchmarks}
 		\item De los parámetros que le podemos pasar al comando. ¿Qué significa \textit{-c 5}?
