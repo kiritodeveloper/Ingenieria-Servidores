@@ -153,6 +153,27 @@
 		y comente las estadísticas. ¿Cuál es la que proporciona mejores resultados? Fíjese en el número
 		de bytes transferidos, ¿es igual para cada máquina?
 		
+		El resultado de la ejecución de \textit{ab} sería:
+		
+		\begin{itemize}
+			\item \textbf{Ubuntu:}
+			\lstinputlisting{./Ubuntu.txt}
+			
+			\item \textbf{Windows Server:}
+			\lstinputlisting{./WS.txt}
+			
+			\item \textbf{CentOS}
+			\lstinputlisting{./CentOS.txt}
+		\end{itemize}
+		
+		Como podemos observar, los resultados de las máquinas son muy bajos, por lo que les estaría
+		afectando en gran parte el ruido. Si suponemos que no se ha captado apensa ruido, podemos
+		concluir que el más rápido sería en nuestro caso \textit{Ubuntu}, seguido de \textit{CentOS}
+		y \textit{Windows Server}, respectivamente. Este hecho quizás sea posible ya que la máquina
+		anfitrión es una variante de Ubuntu y, por tanto, tenga una mayor compatibilidad. Además,
+		podemos ver que el número de bytes transferidos difiere siendo el menor el de \textit{Windows
+		Server}, seguido de \textit{Ubuntu} y \textit{CentOS}.
+		
 	\subsubsection{Gatling}
 		\item \textbf{Opcional:} ¿Qué es Scala? Instale Gatling y pruebe los escenarios por defecto.
 		
