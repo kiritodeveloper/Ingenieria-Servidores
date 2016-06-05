@@ -126,11 +126,27 @@
 		
 	\subsection{Benchmarks y Test de Estrés para Webs}
 	\subsubsection{Apache Benchmarks}
-		\item De los parámetros que le podemos pasar al comando. ¿Qué significa \textit{-c 5}?
+		\item De los parámetros que le podemos pasar al comando, ¿qué significa \textit{-c 5}?
 		¿y \textit{-n 100}? Monitorice la ejecución de \textit{ab} contra alguna máquina (cualquiera),
 		¿cuántos procesos o hebras crea \textit{ab} en el cliente?
 		
+		\textit{ab} es una herramienta de benchmarking diseñada para testear el servidor Apache HTTP
+		por la \textit{Fundación Apache}\cite{apache_official} y distribuida mediante la licencia de
+		software libre \href{https://www.apache.org/licenses/LICENSE-2.0}{\textbf{Apache License}}.
 		
+		Para conocer el significado de los parámetros, simplemente miramos el manual \cite{man_ab} y
+		vemos que \textit{-c} cambia el número de peticiones simultáneas que se pueden lanzar, 5 en
+		nuestro caso, y que \textit{-n} nos permite configurar cuántas peticiones totales queremos
+		realizar, 100 para nuestro ejemplo\footnote{Investigando el manual por mi cuenta para otro
+		trabajo\cite{TWG}, también descubrí algunos parámetros que pueden resultar útiles como pueden
+		ser \textit{-b} para cambia el tamaño de la ventana de mensajes TCP, \textit{-t} para marcar
+		un tiempo límite para el benchmark en lugar de un número de mensajes límite y \textit{-e} que
+		permite escribir un fichero en formato \textit{csv}.}.
+		
+		Monitorizando con \textit{htop}\cite{man_htop}, añadiendo la columna \textit{NLWP} que es la
+		que nos muestra el número de hebras que utiliza cada proceso y filtrando por nombre del comando
+		podemos ver el número de hebras que necesita, que dependerá del número de peticiones simultáneas
+		se le permitan ejecutar.
 		
 		\item Ejecute \textit{ab} contra las 3 máquinas virtuales (desde el SO anfitrión a las máquinas
 		virtuales de la red local en Ubuntu, CentOS y WS) una a una (arrancadas por separado) y muestre
