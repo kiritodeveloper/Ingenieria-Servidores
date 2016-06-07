@@ -182,6 +182,26 @@
 		
 	\subsubsection{Jmeter}
 		\item \textbf{Opcional:} Lea el artículo y elabore un breve resumen.
+		En este artículo\cite{flood_article}, Tim Koopmans compara \textit{JMeter} y \textit{Gatling},
+		según su propia palabra, las dos herramientas de evaluación de rendimiento de código abierto
+		disponibles más populares.
+		
+		Antes de nada, pasa a describirnos el escenario sobre el que se realizarán las pruebas\footnote{
+		Básicamente, se puede resumir en Ubuntu como sistema operativo, 10000 usuarios, 30000 peticiones
+		por minutos un nodo de \textit{flood.io}\footnotemark que 
+		equivale 15 GB de RAM, un procesador de 64 bit con 4 núcleos.}\footnotetext[6]{Básicamente, un
+		poco de autopublicidad.}.
+		
+		Tras el experimento, se deduce que ha poca diferencia entre ambas herramientas pues se obtuvieron
+		unos resultados muy similares con ligeras diferencias:
+		\begin{itemize}
+			\item \textit{Jmeter} utiliza más recursos, tanto de procesador como memoria.
+			\item \textit{Gatling} tiene más problemas de concurrencia.
+		\end{itemize}
+		
+		
+		Especialmente, me parece curiosa la sección \textit{TL;DR}\footnote{Acrónimo de \textit{Too
+		Long; Don't Read}} que básicamente ya nos hace el resumen del artículo.
 		
 		\item Instale y siga el tutorial en \url{http://jmeter.apache.org/usermanual/build-web-test-plan.html}
 		realizando capturas de pantalla y comentándolas. En vez de usar la web de \textit{jmeter},
