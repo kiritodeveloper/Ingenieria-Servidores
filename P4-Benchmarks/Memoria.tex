@@ -282,25 +282,34 @@
 		de demasiado interés pues no recibiremos cookies y la configuración de dicho gestor es bastante
 		específica para cada tipo de servicio y por ello no es fácil mostrar un ejemplo modelo de uso.
 		
-		
+		Finalmente, añadiremos las peticiones HTTP para testear que nos parezcan convenientes. Para
+		ello, basta con hacer click derecho en el grupo de usuarios que creamos tal como la imagen nos
+		muestra:
 		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_7f.jpg}
-			\caption{Resultados del benchmark escogido.}
-			\label{fig:phoroi}
+			\caption{Acceso a la configuración de recepción de peticiones HTTP.}
+			\label{fig:http_sampler}
 		\end{figure}
 		
-		
+		Ahora, configurares la información de las peticiones HTTP que queremos, teniendo en cuenta que
+		los campos no modificados se tomarán con el valor que configuramos cuando establecimos las
+		peticiones por defecto. En nuestro caso, sólo accederemos a modo de ejemplo al servicio de
+		\textit{zabbix} aunque podríamos acceder también al de \textit{phpAdmin} e incluso a ambos a
+		la vez para compararlos. La configuración queda como: 
 		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_7g.jpg}
-			\caption{Resultados del benchmark escogido.}
-			\label{fig:phoro}
+			\caption{Configuración de una petición HTTP.}
+			\label{fig:http_request}
 		\end{figure}
 		
-		
+		En el caso de que disponga de un usuario y contraseña para identificarnos como es el ejemplo
+		de zabbix, también tendremos que pasárselo como parámetro para que logre acceder al servicio
+		\footnote{Nótese que en la captura se aprecia ya el siguiente paso porque olvidé hacerlo
+		anteriormente.}:
 		
 		\begin{figure}[H]
 			\centering
