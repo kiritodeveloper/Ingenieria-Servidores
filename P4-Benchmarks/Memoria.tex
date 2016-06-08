@@ -252,19 +252,37 @@
 			\label{fig:http_menu}
 		\end{figure}
 		
+		En este apartado, podemos configurar las caracterísitcas comunes a todas o la mayoría de las
+		peticiones HTTP que hagamos para así, ahorrarnos tener que completar la información pertinente
+		en cada una de ellas por separado, convirtiendo así la tarea en algo más monótona todavía. Para
+		nuestro experimento particular, como realizaremos pruebas con servicios instalados exclusivamente
+		en nuestras máquinas, estableceremos pues la dirección del servidor web como 127.0.0.1, esto es,
+		la dirección del equipo local. Quedaría finalmente tal que así:
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_7d.jpg}
-			\caption{Resultados del benchmark escogido.}
-			\label{fig:phoroix}
+			\caption{Configuración por defecto de las peticiones HTTP.}
+			\label{fig:http_default}
 		\end{figure}
+		
+		Aunque nuestros servidores no suelen dejar cookies en el dispositivo, a modo de práctica y dado
+		que se considera recomendado en la mayor parte de los casos, instalaremos un gestor de cookies
+		para las peticiones HTTP que realicemos. Para añadirlo, haremos algo similar a lo que hicimos
+		para abrir el menú de configuración de las peticiones HTTP por defecto:
 		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_7e.jpg}
-			\caption{Resultados del benchmark escogido.}
-			\label{fig:phorox}
+			\caption{Añadiremos un gestor de cookies.}
+			\label{fig:cookie}
 		\end{figure}
+		
+		En nuestro caso, lo dejaremos con los valores de los parámetros por defecto, ya que tampoco es
+		de demasiado interés pues no recibiremos cookies y la configuración de dicho gestor es bastante
+		específica para cada tipo de servicio y por ello no es fácil mostrar un ejemplo modelo de uso.
+		
+		
 		
 		\begin{figure}[H]
 			\centering
@@ -273,12 +291,16 @@
 			\label{fig:phoroi}
 		\end{figure}
 		
+		
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_7g.jpg}
 			\caption{Resultados del benchmark escogido.}
 			\label{fig:phoro}
 		\end{figure}
+		
+		
 		
 		\begin{figure}[H]
 			\centering
@@ -287,12 +309,16 @@
 			\label{fig:phor}
 		\end{figure}
 		
+		
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_7i.jpg}
 			\caption{Resultados del benchmark escogido.}
 			\label{fig:phori}
 		\end{figure}
+		
+		
 		
 		\begin{figure}[H]
 			\centering
