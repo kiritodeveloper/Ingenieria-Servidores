@@ -118,7 +118,7 @@
 			\centering
 			\includegraphics[width=15cm]{Ejercicio_2.jpg}
 			\caption{Resultados del benchmark escogido.}
-			\label{fig:phoronix}	
+			\label{fig:phoronix}
 		\end{figure}
 		
 		Al finalizar, se sugiere mostrar los resultados en el navegador(y si quieres subirlos a la
@@ -207,6 +207,99 @@
 		haga el experimento usando alguna de sus máquinas virtuales (Puede hacer una página sencilla,
 		usar las páginas de \textit{phpmyadmin}, instalar un \textit{CMS}, \dots).
 		
+		Para instalar \textit{JMeter}, nos bastará con hacer uso del gestor de paquetes por defecto, en
+		mi caso sería \textit{apt-get}, para instalar el paquete de nombre \textit{jmeter}.
+		
+		Tras instalarlo y, aunque no es mi caso, configurarlo inicialmente para que se adapte al uso que
+		posteriormente se le dará, procedemos a ejecutarlo\footnote{Sería conveniente previamente echar
+		un vistazo a su manual \cite{man_jmeter} aunque por mi parte no encontré nada especialmente de
+		interés aunque para una integración a un trabajo más serio que éste, pues esto no es más que un
+		experimento de juguete para tomar contacto con la herramienta, es bastante probable que dichas
+		funcionalidades sean de interés.}.
+		
+		Siguiendo el tutorial proporcionado, vemos que el primer paso sería definir el conjunto de
+		usuarios que utilizaremos para esta prueba. Para esto, haremos click derecho en la batería de
+		pruebas definidas por el usuario como podemos ver en la imagen:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7a.jpg}
+			\caption{Abrimos el menú de creación de usuarios.}
+			\label{fig:user_menu}
+		\end{figure}
+		
+		Dentro de este menú, configuramos a placer algunas de las características del grupo de usuarios
+		que queremos emular, así como el número de ellos que simularemos, el intervalo de tiempo que
+		estableceremos entre el inicio de un usuario y el siguiente, el número de iteraciones que
+		ejecutaremos,... Por defecto, el tutorial nos indica que modifiquemos el nombre, el número de
+		usuarios y el número de iteraciones tal y como se nos muestra:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7b.jpg}
+			\caption{Configuración del \textit{Thread Group}.}
+			\label{fig:user_config}
+		\end{figure}
+		
+		Dentro de este grupo, crearemos unos parámetros por defecto para configuraciones HTTP, para
+		ello, previamente haremos click derecho en el grupo para añadirlo como podemos ver en la
+		siguiente imagen:
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7c.jpg}
+			\caption{Abrimos el menú de configuración de peticiones HTTP.}
+			\label{fig:http_menu}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7d.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phoroix}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7e.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phorox}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7f.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phoroi}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7g.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phoro}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7h.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phor}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7i.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phori}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=15cm]{Ejercicio_7j.jpg}
+			\caption{Resultados del benchmark escogido.}
+			\label{fig:phorn}
+		\end{figure}
 		
 		
 	\subsection{Benchmarks para Windows}
