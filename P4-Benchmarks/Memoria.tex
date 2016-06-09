@@ -375,6 +375,41 @@
 		Alternativamente, puede descargar alguno de algún repositorio en GitHub y modificarlo según sus
 		necesidades.
 		
+		\begin{itemize}
+			\item \large\textbf{Parámetros:}
+				Este benchmark realiza un análisis de velocidad de lectura y escritura en memoria, ya
+				sea tanto de unidades internas como un disco duro o externas como una memoria USB.
+				
+				Para el correcto funcionamiento del benchmark, se requiere de su ejecución con los
+				siguientes parámetros:
+				
+				\begin{itemize}
+					\item \textbf{Tamaño}: El número de Gigabytes que se leerán/escribirán\footnote{Por
+					el diseño del benchmark, es necesario que se tenga en el dispositivo al menos el
+					doble de este valor libre, ya que para la prueba de lectura/escritura se necesitan
+					2 archivos simultáneamente. Estos archivos se borrarán al finalizar, siempre y cuando
+					el programa termine su ejecución correctamente}.
+					
+					\item \textbf{Archivo}: El archivo de donde se sacarán los datos\footnote{En Linux,
+					se recomienda usar \textit{/dev/urandom}.}.
+					
+					\item \textbf{Direcciones}: Las direcciones a los distintos dispositivos en los que
+					se realizará la prueba. Mínimo: 1.
+				\end{itemize}
+				
+				Para la medición del tiempo, se ha optado por la utilización de las instrucciones
+				\textit{gettimeofday} y \textit{timersub}. Dado que \textit{gettimeofday} tiene un
+				tiempo de ejecución del orden de las milésimas de segundo y se ejecuta justo al empezar
+				y al terminar a \textsc{escribir}/\textsc{leer}/\textsc{leer-y-escribir}, y los
+				resultados son del orden de los segundos(incluso de los minutos), no considero que afecte
+				en gran cantidad a la medición.
+				
+			\item \large\textbf{Experimento:}
+				
+			\item \large\textbf{Resultados:}
+		\end{itemize}
+		
+		
 \end{enumerate}
 
 \newpage
