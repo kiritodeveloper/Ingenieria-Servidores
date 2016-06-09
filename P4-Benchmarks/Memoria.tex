@@ -405,6 +405,39 @@
 				en gran cantidad a la medición.
 				
 			\item \large\textbf{Experimento:}
+				Construiremos un experimento con la finalidad de determinar si realmente la diferencia
+				de velocidad entre dispositivos de almacenamiento interno y externo es tan grande como
+				cabe pensar a priori y si el sistema de archivos repercute significativamente en la
+				velocidad de acceso a los datos.
+				
+				Por ello, para el experimento, se utilizará mi disco duro, que contiene varias
+				particiones, en concreto, la partición de \textit{Linux} con \textbf{ext4} y la
+				partición de \textit{Windows} con \textbf{nfts} y una memoria externa, en concreto,
+				un pendrive USB.
+				
+				La prueba consiste en realizar 5 veces:
+				
+				\begin{itemize}
+					\item Tomar 1 MB del archivo pasado, y copiar hasta obtener 1GB\footnote{Nótese que
+					si copiamos el contenido en un array auxiliar, concatenamos y repetimos, tras 1024
+					iteraciones ya tendremos 1 GB.}.
+					
+					\item Para cada dirección pasada como parámetro:
+						\begin{itemize}
+							\item Creamos 2 archivos.
+					
+							\item Escribimos tantos Gigabytes como indique el parámetro pasado de uno
+							en uno Gigabyte\footnote{Yo pasaré 5GB como tamaño}.
+					
+							\item Leemos tantos Gigabytes como indique el parámetro pasado de uno en
+							uno Gigabyte.
+					
+							\item Leemos del primer archivo y escribimos en el segundo tantos
+							Gigabytes como indique el parámetro pasado de uno en uno Gigabyte.
+							
+							\item Eliminamos los archivos.
+						\end{itemize}
+				\end{itemize}
 				
 			\item \large\textbf{Resultados:}
 		\end{itemize}
