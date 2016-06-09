@@ -377,6 +377,7 @@
 		
 		\begin{itemize}
 			\item \large\textbf{Parámetros:}
+				
 				Este benchmark realiza un análisis de velocidad de lectura y escritura en memoria, ya
 				sea tanto de unidades internas como un disco duro o externas como una memoria USB.
 				
@@ -405,6 +406,7 @@
 				en gran cantidad a la medición.
 				
 			\item \large\textbf{Experimento:}
+				
 				Construiremos un experimento con la finalidad de determinar si realmente la diferencia
 				de velocidad entre dispositivos de almacenamiento interno y externo es tan grande como
 				cabe pensar a priori y si el sistema de archivos repercute significativamente en la
@@ -440,8 +442,30 @@
 				\end{itemize}
 				
 			\item \large\textbf{Resultados:}
+			
+			Los resultados se encuentran disponibles en los archivos adjuntos \textit{Resultados.csv}
+			(sin ordenar) y \textit{Resultados.ods} (ya ordenados y analizados). Como podemos ver en
+			la tabla:
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=15cm]{Ejercicio_9.jpg}
+				\caption{Gráfica con los resultados del experimento con el benchmark.}
+				\label{fig:benchmark}	
+			\end{figure}
+			
+			Tras obtener los resultados del benchmark, realizamos el procedimiento visto en las clases
+			de teoría, calculamos la \textit{media} y la \textit{desviación típica} de las diferencias
+			y vemos si podrían pertenecer a una distribución \textit{T-Student} con $n-1$ grados de
+			libertad, es decir, 14 grados de libertad.
+			
+			Como podemos ver en el archivo adjunto \textit{Resultados.ods}, no obtenemos resultados
+			significativos entre distintas versiones del sistema de ficheros pero sí entre el disco
+			duro y la memoria USB, con una media de 170 segundos en cada fase de la prueba.
 		\end{itemize}
 		
+		La información pertinente se ha sacado de \cite{benchmark}. Toda sugerencia de mejora,
+		corrección de erratas y demás es bienvenida.
 		
 \end{enumerate}
 
